@@ -1,0 +1,17 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+
+
+entity datapath is port(
+									Mdatain : in std_logic_vector (31 downto 0)
+);
+
+
+MDRunit: MDR port map( 	
+								bus_output => BusMuxOut,
+								memory_data_in => Mdatain, 
+								
+								
+
+									)

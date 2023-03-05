@@ -1,0 +1,67 @@
+library IEEE; 
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_unsigned.all;
+use IEEE.numeric_std.all;
+
+entity DIV32 is
+port( dividend, divisor: in std_logic_vector(31 downto 0);
+		quotient: out std_logic_vector(63 downto 0));
+end entity DIV32;
+
+architecture behavioural of DIV32 is
+	begin
+		process(dividend,divisor)
+		variable tempdividend, tempdivisor, tempquotient: std_logic_vector(31 downto 0);
+		variable flag: std_logic;
+		variable count: integer :=32; 
+		variable X,Y,Z: unsigned(31 downto 0);
+		
+		begin
+		
+		if (dividend(31) = '1') then
+			if (divisor(31) = '1') then 
+				tempdividend := (0-dividend);
+				tempdivisor := (0-divisor);
+			else 
+				tempdividend := (0-dividend);
+				flag := '1';
+			end if; 
+		elsif (divisor(31) = '1') then
+			tempdivisor := (0-divisor);
+			flag := '1';
+		end if; 
+				
+			
+		A:="00000000000000000000000000000000";
+
+		for i in 0 to 31 loop
+			shifted(31 downto 1):= A(30 downto 0);
+			shifted(0):= Q(31);
+			A:= shifted;
+			shifted(31 downto 1):= Q(30 downto 0);
+			shifted(0):= '0';
+			Q:= shifted;
+			tmp_A:= A - fixed_Divisor;
+			A:= tmp_A;
+			if ((A(31) = '1')) then
+				Q(0):= '0';
+				tmp_A:= A + fixed_Divisor;
+				A:=tmp_A;
+			else
+				Q(0):='1';
+			end if;
+		end loop;
+		if dividendN = '1' and divisorN = '1' then
+			Quotient(63 downto 32) <= Q;
+			Quotient(31 downto 0) <=A;
+		elsif dividendN ='1' or divisorN = '1' then
+			Q := 0-Q;
+			Quotient(63 downto 32) <= Q;
+			Quotient(31 downto 0) <=A;
+		else 
+			Quotient(63 downto 32) <= Q;
+			Quotient(31 downto 0) <=A;
+		end if;
+end process;
+
+end architecture behavioural;

@@ -1,0 +1,23 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity AND32 is
+port(
+
+    AReg: in std_logic_vector(31 downto 0);
+    BReg: in std_logic_vector(31 downto 0);
+    ZReg: out std_logic_vector(31 downto 0)
+);
+end entity;
+
+architecture behaviour of AND32 is
+
+begin
+
+process(AReg, BReg)
+begin
+And_loop : for i in 0 to 31 loop
+    Zreg(i) <= AReg(i) and BReg(i);
+end loop And_loop;
+end process;
+end behavior;
