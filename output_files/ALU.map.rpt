@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ALU
-Sun Mar 05 01:07:54 2023
+Mon Mar 06 04:29:55 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -43,7 +43,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Mar 05 01:07:54 2023           ;
+; Analysis & Synthesis Status        ; Successful - Mon Mar 06 04:29:55 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; ALU                                             ;
 ; Top-level Entity Name              ; datapath                                        ;
@@ -273,7 +273,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Mar 05 01:07:50 2023
+    Info: Processing started: Mon Mar 06 04:29:52 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file reg32.vhd
@@ -363,14 +363,18 @@ Info (12021): Found 2 design units, including 1 entities, in source file tb3_12.
 Info (12021): Found 2 design units, including 1 entities, in source file tb3_3.vhd
     Info (12022): Found design unit 1: tb3_3-behaviour
     Info (12023): Found entity 1: tb3_3
-Info (12021): Found 2 design units, including 1 entities, in source file singleadder.vhd
-    Info (12022): Found design unit 1: singleadder-behavior
-    Info (12023): Found entity 1: singleadder
-Info (12021): Found 0 design units, including 0 entities, in source file adder.vhd
-Info (12021): Found 0 design units, including 0 entities, in source file fulladder.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file tb3_4.vhd
     Info (12022): Found design unit 1: tb3_4-behaviour
     Info (12023): Found entity 1: tb3_4
+Info (12021): Found 2 design units, including 1 entities, in source file tb3_6.vhd
+    Info (12022): Found design unit 1: tb3_6-behaviour
+    Info (12023): Found entity 1: tb3_6
+Info (12021): Found 2 design units, including 1 entities, in source file tbdiv.vhd
+    Info (12022): Found design unit 1: tbdiv-behaviour
+    Info (12023): Found entity 1: tbdiv
+Info (12021): Found 2 design units, including 1 entities, in source file tb3_5.vhd
+    Info (12022): Found design unit 1: tb3_5-behaviour
+    Info (12023): Found entity 1: tb3_5
 Info (12127): Elaborating entity "datapath" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(85): object "IRwire" assigned a value but never read
 Warning (10541): VHDL Signal Declaration warning at datapath.vhd(91): used implicit default value for signal "busMuxCin" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
@@ -388,7 +392,79 @@ Info (12128): Elaborating entity "SHL32" for hierarchy "ALU:ALUunit|SHL32:shifto
 Info (12128): Elaborating entity "ROR32" for hierarchy "ALU:ALUunit|ROR32:rotateright"
 Info (12128): Elaborating entity "ROL32" for hierarchy "ALU:ALUunit|ROL32:rotateleft"
 Info (12128): Elaborating entity "MUL32" for hierarchy "ALU:ALUunit|MUL32:multiplication"
+Warning (10631): VHDL Process Statement warning at MUL32.vhd(15): inferring latch(es) for signal or variable "number", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "number[0]" at MUL32.vhd(49)
+Info (10041): Inferred latch for "number[1]" at MUL32.vhd(49)
+Info (10041): Inferred latch for "number[2]" at MUL32.vhd(49)
+Info (10041): Inferred latch for "one[0]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[1]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[2]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[3]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[4]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[5]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[6]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[7]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[8]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[9]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[10]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[11]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[12]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[13]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[14]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[15]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[16]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[17]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[18]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[19]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[20]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[21]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[22]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[23]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[24]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[25]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[26]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[27]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[28]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[29]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[30]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[31]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[32]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[33]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[34]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[35]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[36]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[37]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[38]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[39]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[40]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[41]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[42]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[43]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[44]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[45]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[46]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[47]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[48]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[49]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[50]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[51]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[52]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[53]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[54]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[55]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[56]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[57]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[58]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[59]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[60]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[61]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[62]" at MUL32.vhd(67)
+Info (10041): Inferred latch for "one[63]" at MUL32.vhd(67)
 Info (12128): Elaborating entity "DIV32" for hierarchy "ALU:ALUunit|DIV32:division"
+Warning (10631): VHDL Process Statement warning at DIV32.vhd(15): inferring latch(es) for signal or variable "dividendflag", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at DIV32.vhd(15): inferring latch(es) for signal or variable "divisorflag", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "divisorflag" at DIV32.vhd(32)
+Info (10041): Inferred latch for "dividendflag" at DIV32.vhd(28)
 Info (12128): Elaborating entity "encoder32to5" for hierarchy "encoder32to5:encoder"
 Info (12128): Elaborating entity "bus32to1" for hierarchy "bus32to1:busUnit"
 Info (12128): Elaborating entity "MDR" for hierarchy "MDR:MDRunit"
@@ -499,10 +575,10 @@ Warning (21074): Design contains 99 input pin(s) that do not drive logic
 Info (21057): Implemented 99 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 99 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 105 warnings
-    Info: Peak virtual memory: 4643 megabytes
-    Info: Processing ended: Sun Mar 05 01:07:54 2023
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:02
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 108 warnings
+    Info: Peak virtual memory: 4628 megabytes
+    Info: Processing ended: Mon Mar 06 04:29:55 2023
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 

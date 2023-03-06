@@ -1,5 +1,5 @@
 Flow report for ALU
-Sun Mar 05 01:07:54 2023
+Mon Mar 06 04:29:55 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Sun Mar 05 01:07:54 2023           ;
+; Flow Status                        ; Successful - Mon Mar 06 04:29:55 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; ALU                                             ;
 ; Top-level Entity Name              ; datapath                                        ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/05/2023 01:07:51 ;
+; Start date & time ; 03/06/2023 04:29:53 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ALU                 ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 132127265823887.167799647117884       ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 132127265823887.167809499223812       ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; tb3_1          ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; tb3_2          ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; tb3_7          ;
@@ -86,7 +86,10 @@ applicable agreement for further details.
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; tb3_12         ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; tb3_3          ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; tb3_4          ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb3_4                                 ; --            ; --          ; eda_simulation ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; tb3_6          ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; tbdiv          ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; tb3_5          ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb3_5                                 ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                  ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --             ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --          ; eda_simulation ;
@@ -100,6 +103,9 @@ applicable agreement for further details.
 ; EDA_TEST_BENCH_FILE                  ; tb3_12.vhd                            ; --            ; --          ; tb3_12         ;
 ; EDA_TEST_BENCH_FILE                  ; tb3_3.vhd                             ; --            ; --          ; tb3_3          ;
 ; EDA_TEST_BENCH_FILE                  ; tb3_4.vhd                             ; --            ; --          ; tb3_4          ;
+; EDA_TEST_BENCH_FILE                  ; tb3_6.vhd                             ; --            ; --          ; tb3_6          ;
+; EDA_TEST_BENCH_FILE                  ; tbdiv.vhd                             ; --            ; --          ; tbdiv          ;
+; EDA_TEST_BENCH_FILE                  ; tb3_5.vhd                             ; --            ; --          ; tb3_5          ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; tb3_1                                 ; --            ; --          ; tb3_1          ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; tb3_2                                 ; --            ; --          ; tb3_2          ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; tb3_7                                 ; --            ; --          ; tb3_7          ;
@@ -110,6 +116,9 @@ applicable agreement for further details.
 ; EDA_TEST_BENCH_MODULE_NAME           ; tb3_12                                ; --            ; --          ; tb3_12         ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; tb3_3                                 ; --            ; --          ; tb3_3          ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; tb3_4                                 ; --            ; --          ; tb3_4          ;
+; EDA_TEST_BENCH_MODULE_NAME           ; tb3_6                                 ; --            ; --          ; tb3_6          ;
+; EDA_TEST_BENCH_MODULE_NAME           ; tbdiv                                 ; --            ; --          ; tbdiv          ;
+; EDA_TEST_BENCH_MODULE_NAME           ; tb3_5                                 ; --            ; --          ; tb3_5          ;
 ; EDA_TEST_BENCH_NAME                  ; tb3_1                                 ; --            ; --          ; eda_simulation ;
 ; EDA_TEST_BENCH_NAME                  ; tb3_2                                 ; --            ; --          ; eda_simulation ;
 ; EDA_TEST_BENCH_NAME                  ; tb3_7                                 ; --            ; --          ; eda_simulation ;
@@ -120,6 +129,9 @@ applicable agreement for further details.
 ; EDA_TEST_BENCH_NAME                  ; tb3_12                                ; --            ; --          ; eda_simulation ;
 ; EDA_TEST_BENCH_NAME                  ; tb3_3                                 ; --            ; --          ; eda_simulation ;
 ; EDA_TEST_BENCH_NAME                  ; tb3_4                                 ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; tb3_6                                 ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; tbdiv                                 ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; tb3_5                                 ; --            ; --          ; eda_simulation ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                ; --            ; --          ; tb3_1          ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                ; --            ; --          ; tb3_2          ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                ; --            ; --          ; tb3_7          ;
@@ -130,6 +142,9 @@ applicable agreement for further details.
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                ; --            ; --          ; tb3_12         ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                ; --            ; --          ; tb3_3          ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                ; --            ; --          ; tb3_4          ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                ; --            ; --          ; tb3_6          ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                ; --            ; --          ; tbdiv          ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                ; --            ; --          ; tb3_5          ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --          ; --             ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                  ; --            ; --          ; --             ;
@@ -148,8 +163,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:04     ; 1.0                     ; 4636 MB             ; 00:00:02                           ;
-; Total                ; 00:00:04     ; --                      ; --                  ; 00:00:02                           ;
+; Analysis & Synthesis ; 00:00:02     ; 1.0                     ; 4628 MB             ; 00:00:03                           ;
+; Total                ; 00:00:02     ; --                      ; --                  ; 00:00:03                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

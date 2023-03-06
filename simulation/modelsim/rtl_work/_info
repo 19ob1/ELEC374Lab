@@ -15,7 +15,7 @@ L4
 VNCzR^9CV=6Ldo2eeK_E0Q2
 Z7 OV;C;10.1d;51
 31
-Z8 !s108 1677996496.824000
+Z8 !s108 1678095017.131000
 Z9 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/elec374/ALU/ADD32.vhd|
 Z10 !s107 C:/altera/13.0sp1/elec374/ALU/ADD32.vhd|
 Z11 o-93 -work work -O0
@@ -53,7 +53,7 @@ L9
 VoEaYa6cg9Aj4PXNI69`H@1
 R7
 31
-Z19 !s108 1677996497.137000
+Z19 !s108 1678095017.497000
 Z20 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/elec374/ALU/ALU.vhd|
 Z21 !s107 C:/altera/13.0sp1/elec374/ALU/ALU.vhd|
 R11
@@ -91,7 +91,7 @@ L4
 Vc[F:Q^973_lO9BA^CHd`e2
 R7
 31
-Z25 !s108 1677996496.082000
+Z25 !s108 1678095016.258000
 Z26 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/elec374/ALU/AND32.vhd|
 Z27 !s107 C:/altera/13.0sp1/elec374/ALU/AND32.vhd|
 R11
@@ -126,7 +126,7 @@ L5
 V]?>gKf@k=h[E?==1k2@EE0
 R7
 31
-Z31 !s108 1677996495.856000
+Z31 !s108 1678095015.954000
 Z32 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/elec374/ALU/bus32to1.vhd|
 Z33 !s107 C:/altera/13.0sp1/elec374/ALU/bus32to1.vhd|
 R11
@@ -162,7 +162,7 @@ L5
 VZ30bVmiKS[ENGm8^Y5iXU2
 R7
 31
-Z37 !s108 1677996496.002000
+Z37 !s108 1678095016.147000
 Z38 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/elec374/ALU/datapath.vhd|
 Z39 !s107 C:/altera/13.0sp1/elec374/ALU/datapath.vhd|
 R11
@@ -187,7 +187,7 @@ R12
 !s100 UkCOS5]V^S6Ji<ZCk>En40
 !i10b 1
 Ediv32
-Z40 w1677294854
+Z40 w1678093859
 R14
 R15
 Z41 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
@@ -198,15 +198,15 @@ Z42 8C:/altera/13.0sp1/elec374/ALU/DIV32.vhd
 Z43 FC:/altera/13.0sp1/elec374/ALU/DIV32.vhd
 l0
 L6
-VJ9Z0FP0^MWLVe`50ioDL31
+V@C0_K63G5XDm1Y`R3S05_3
 R7
 31
-Z44 !s108 1677996496.976000
+Z44 !s108 1678095017.316000
 Z45 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/elec374/ALU/DIV32.vhd|
 Z46 !s107 C:/altera/13.0sp1/elec374/ALU/DIV32.vhd|
 R11
 R12
-!s100 3C0Q3ahVTWb7h@RQ4@B<Y3
+!s100 IXWnI]hT^RV2czYGgJejM2
 !i10b 1
 Abehavioural
 R14
@@ -214,10 +214,10 @@ R15
 R41
 R2
 R3
-DEx4 work 5 div32 0 22 J9Z0FP0^MWLVe`50ioDL31
-l12
-L11
-V=`nAfJ^mh@`l2lb`9GQ2=3
+DEx4 work 5 div32 0 22 @C0_K63G5XDm1Y`R3S05_3
+l14
+L13
+Vl<<I5RI^VZdKh3__55i5i3
 R7
 31
 R44
@@ -225,7 +225,7 @@ R45
 R46
 R11
 R12
-!s100 [iL<P_Izf:X6i8ojR`M@41
+!s100 VX_im^jfG=<RJk[nK4KHK2
 !i10b 1
 Eencoder32to5
 Z47 w1677852348
@@ -239,7 +239,7 @@ L5
 VnzY]]QYoLz_aDCSA42d6V0
 R7
 31
-Z50 !s108 1677996495.784000
+Z50 !s108 1678095015.887000
 Z51 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/elec374/ALU/encoder32to5.vhd|
 Z52 !s107 C:/altera/13.0sp1/elec374/ALU/encoder32to5.vhd|
 R11
@@ -274,7 +274,7 @@ L6
 Vn<mGgDhSV9IJ;U:b6?gf;0
 R7
 31
-Z56 !s108 1677996495.928000
+Z56 !s108 1678095016.072000
 Z57 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/elec374/ALU/MDR.vhd|
 Z58 !s107 C:/altera/13.0sp1/elec374/ALU/MDR.vhd|
 R11
@@ -298,33 +298,37 @@ R12
 !s100 R[8hTI831B9D=Nd4_i<^F2
 !i10b 1
 Emul32
-Z59 w1677383089
+Z59 w1678085622
 R14
+R15
+R41
 R2
 R3
 R4
 Z60 8C:/altera/13.0sp1/elec374/ALU/MUL32.vhd
 Z61 FC:/altera/13.0sp1/elec374/ALU/MUL32.vhd
 l0
-L6
-V`Af:nieHN8e5VJJd15z=;0
+L7
+V65KTV8V?om7z7BfmnQk3c2
 R7
 31
-Z62 !s108 1677996497.056000
+Z62 !s108 1678095017.395000
 Z63 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/elec374/ALU/MUL32.vhd|
 Z64 !s107 C:/altera/13.0sp1/elec374/ALU/MUL32.vhd|
 R11
 R12
-!s100 ZJ?kcMLb^kK3iHc3zdd4E3
+!s100 GK]d8V^A4dLmeYO@g;?dC2
 !i10b 1
 Abehavioral
 R14
+R15
+R41
 R2
 R3
-DEx4 work 5 mul32 0 22 `Af:nieHN8e5VJJd15z=;0
-l13
-L12
-VQHO@_ba@PRJ@@z5g:jkUV1
+DEx4 work 5 mul32 0 22 65KTV8V?om7z7BfmnQk3c2
+l14
+L13
+VMe4jHk:GQBV764=]d9_Bi1
 R7
 31
 R62
@@ -332,7 +336,7 @@ R63
 R64
 R11
 R12
-!s100 g=<UbeNkDZDM3>47ff2`>1
+!s100 6J69odSWiESVN0gRdOofz1
 !i10b 1
 Eneg32
 Z65 w1677995605
@@ -349,7 +353,7 @@ L8
 VPiVi8WUa0cRJOC:c]4aCm1
 R7
 31
-Z68 !s108 1677996496.232000
+Z68 !s108 1678095016.449000
 Z69 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/elec374/ALU/NEG32.vhd|
 Z70 !s107 C:/altera/13.0sp1/elec374/ALU/NEG32.vhd|
 R11
@@ -387,7 +391,7 @@ L4
 VKQiAZi_gmR2Vo_;gRL1AU1
 R7
 31
-Z74 !s108 1677996496.337000
+Z74 !s108 1678095016.532000
 Z75 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/elec374/ALU/NOT32.vhd|
 Z76 !s107 C:/altera/13.0sp1/elec374/ALU/NOT32.vhd|
 R11
@@ -422,7 +426,7 @@ L4
 V75ZmbAeDl0:f5GYi4IoPR0
 R7
 31
-Z80 !s108 1677996496.157000
+Z80 !s108 1678095016.355000
 Z81 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/elec374/ALU/OR32.vhd|
 Z82 !s107 C:/altera/13.0sp1/elec374/ALU/OR32.vhd|
 R11
@@ -457,7 +461,7 @@ L4
 V58U6cbETPldkBmcdBg5eP0
 R7
 31
-Z86 !s108 1677996495.682000
+Z86 !s108 1678095015.806000
 Z87 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/elec374/ALU/reg32.vhd|
 Z88 !s107 C:/altera/13.0sp1/elec374/ALU/reg32.vhd|
 R11
@@ -495,7 +499,7 @@ L6
 VCa@o@HfIQWUBiZmjPCzW[2
 R7
 31
-Z92 !s108 1677996496.661000
+Z92 !s108 1678095016.942000
 Z93 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/elec374/ALU/ROL32.vhd|
 Z94 !s107 C:/altera/13.0sp1/elec374/ALU/ROL32.vhd|
 R11
@@ -536,7 +540,7 @@ L6
 VW8IX<n>Y@kcV^OSNz`4zk3
 R7
 31
-Z98 !s108 1677996496.742000
+Z98 !s108 1678095017.027000
 Z99 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/elec374/ALU/ROR32.vhd|
 Z100 !s107 C:/altera/13.0sp1/elec374/ALU/ROR32.vhd|
 R11
@@ -578,7 +582,7 @@ L7
 Vm^UMLo>`eXjNV93miX9Ea1
 R7
 31
-Z104 !s108 1677996496.412000
+Z104 !s108 1678095016.623000
 Z105 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/elec374/ALU/SHL32.vhd|
 Z106 !s107 C:/altera/13.0sp1/elec374/ALU/SHL32.vhd|
 R11
@@ -621,7 +625,7 @@ L7
 V83dKaIzRURa2]bDVg:PT?2
 R7
 31
-Z110 !s108 1677996496.501000
+Z110 !s108 1678095016.736000
 Z111 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/elec374/ALU/SHR32.vhd|
 Z112 !s107 C:/altera/13.0sp1/elec374/ALU/SHR32.vhd|
 R11
@@ -661,7 +665,7 @@ L5
 V95c>VTa2Z8nEjdnJ8H0GA0
 R7
 31
-Z116 !s108 1677996496.583000
+Z116 !s108 1678095016.818000
 Z117 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/elec374/ALU/SHRA32.vhd|
 Z118 !s107 C:/altera/13.0sp1/elec374/ALU/SHRA32.vhd|
 R11
@@ -697,7 +701,7 @@ L4
 V1T:TQK8[Do4V?[oAEEL;n0
 R7
 31
-Z122 !s108 1677996496.897000
+Z122 !s108 1678095017.240000
 Z123 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/elec374/ALU/SUB32.vhd|
 Z124 !s107 C:/altera/13.0sp1/elec374/ALU/SUB32.vhd|
 R11
@@ -720,33 +724,33 @@ R11
 R12
 !s100 OjLeg9NDn7APh7N>ASh]j2
 !i10b 1
-Etb3_4
-Z125 w1677996453
+Etb3_5
+Z125 w1678094979
 R2
 R3
 R4
-Z126 8C:/altera/13.0sp1/elec374/ALU/tb3_4.vhd
-Z127 FC:/altera/13.0sp1/elec374/ALU/tb3_4.vhd
+Z126 8C:/altera/13.0sp1/elec374/ALU/tb3_5.vhd
+Z127 FC:/altera/13.0sp1/elec374/ALU/tb3_5.vhd
 l0
-L6
-V4`df<`bm`70WE5Ialf[]B2
-!s100 3`:8XkbiA2gDMUM782_Sn0
+L5
+V0M9V9B<=XIT]e`VR3m_I`0
+!s100 z9Bmzc1YMG56HiQNO@Wg]2
 R7
 31
 !i10b 1
-Z128 !s108 1677996497.219000
-Z129 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/elec374/ALU/tb3_4.vhd|
-Z130 !s107 C:/altera/13.0sp1/elec374/ALU/tb3_4.vhd|
+Z128 !s108 1678095017.578000
+Z129 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/elec374/ALU/tb3_5.vhd|
+Z130 !s107 C:/altera/13.0sp1/elec374/ALU/tb3_5.vhd|
 R11
 R12
 Abehaviour
 R2
 R3
-DEx4 work 5 tb3_4 0 22 4`df<`bm`70WE5Ialf[]B2
-l43
-L11
-VoM8CN]i?RMW5WSK<_n]lG3
-!s100 48inAJmWb_mRQhZXMU5c@1
+DEx4 work 5 tb3_5 0 22 0M9V9B<=XIT]e`VR3m_I`0
+l42
+L10
+VGf8LPHRg?O9ZoZ^2<b_@<3
+!s100 K5k6Bz_890_[La<:0hi:?3
 R7
 31
 !i10b 1
