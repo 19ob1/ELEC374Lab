@@ -5,7 +5,6 @@ use ieee.std_logic_arith.all;
 use ieee.numeric_std.all;
 library work;
 
-
 entity ALU is
 port(
 	Ain : in std_logic_vector(31 downto 0);
@@ -135,7 +134,6 @@ signal pc_result : std_logic_vector(31 downto 0);
 
 -- map components
 begin
-
 andoperation: AND32 port map(A=> Ain, B => Bin, Z => and_result);
 oroperation:  OR32 port map(A=> Ain, B => Bin, Z => or_result);
 notoperation: NOT32 port map(A=> Ain, Z => not_result);
@@ -153,7 +151,8 @@ incrementPC : ADD32  port map(A => x"00000001", B => Bin, result => pc_result);
 
 
 ALU: process(Ain, Bin, and_op, or_op, not_op, add_op, sub_op, shr_op, ror_op, shl_op, rol_op, neg_op, mult_op, div_op, incPC, shra_op,
-				 add_result,and_result, or_result, not_result, sub_result, neg_result, pc_result, shra_result, shr_result, shl_result, ror_result, rol_result, mul_result, div_result) is
+				 add_result,and_result, or_result, not_result, sub_result, neg_result, pc_result, shra_result, shr_result, 
+				 shl_result, ror_result, rol_result, mul_result, div_result) is
 begin
 	if (and_op = '1') then 
 		Zreg(63 downto 32) <= (others => '0');

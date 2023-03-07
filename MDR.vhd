@@ -2,7 +2,6 @@ library ieee;
 use ieee.std_logic_1164.all;
 library work;
 
-
 entity MDR is
 	port(
 			bus_output, memory_data_in : in std_logic_vector(31 downto 0);
@@ -44,7 +43,4 @@ case read_mux is
 		 connect_wire <= bus_output; 
 end case; 
 end process; 
-
---connect_wire <= memory_data_in when read_mux = '1' else
-					 --bus_output;
 end architecture;

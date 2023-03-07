@@ -31,7 +31,7 @@ port(
 end component;
 
 begin
-SUBNEG : NEG32 port map(Areg => B, Z => temp);   --assuming ra-rb is the format to follow
+SUBNEG : NEG32 port map(Areg => B, Z => temp);   
 SUBADD : ADD32 port map(A => A, B => temp, result => output);
 end behaviour;
 

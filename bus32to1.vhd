@@ -1,7 +1,6 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 
-
 entity bus32to1 is port(
 
 	mux_in_0, mux_in_1, mux_in_2, mux_in_3, mux_in_4, mux_in_5, mux_in_6, 

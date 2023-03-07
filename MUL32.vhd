@@ -85,9 +85,7 @@ begin
 		one := std_logic_vector(shift_left(unsigned(one), count)); --each two we skip
 		count := count + 2; 
 		sum := sum + one;   
-		
 		end loop; 
 		out_product<= sum; 
-		
 		end process; 
 end behavioral;

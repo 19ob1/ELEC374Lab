@@ -12,15 +12,14 @@ entity datapath is port(
 	PCout, Zlowout, Zhighout, LOout, HIout, INPORTout, MDRout, Cout : in std_logic;
 	
 	incPc, read_op, and_op, or_op, add_op, sub_op, mult_op, div_op, shr_op, shl_op, ror_op, rol_op, neg_op, not_op, shra_op : in std_logic;
+	R0val, R1val, R2val, R3val, R4val, R5val, R6val, R7val, R8val, R9val, R10val, R11val, R12val, R13val, R14val, R15val, MDRval, Yval, ZLOval, ZHIval, HIval, LOval, 
+	Busval: out std_logic_vector(31 downto 0);
 	clk, clear: in std_logic;
 	Mdatain : in std_logic_vector (31 downto 0)	
 );
-
 end entity datapath; 
 
 architecture behaviour of datapath is
-
-
 component ALU is 
 port(
 	Ain : in std_logic_vector(31 downto 0);
@@ -211,6 +210,42 @@ regY : reg32 port map(inputd=> BusMuxOut,outputq=> YdataOut,clear => clear, clk 
 regPC : reg32 port map(inputd=> BusMuxOut,outputq=> busMuxPCin,clear => clear, clk => clk, enable => PCin);
 regZhigh : reg32 port map(inputd=> ALU_output(63 downto 32),outputq=> busMuxZhighin, clear => clear, clk => clk, enable => Zin);
 regZlow : reg32 port map(inputd=> ALU_output(31 downto 0),outputq=> busMuxZlowin,clear => clear, clk => clk, enable => Zin);
+
+
+process (clk, clear,  
+R0In, R1In, R2In, R3In, R4In, R5In, R6In, R7In, R8In, R9In, R10In, 
+R11In, R12In, R13In, R14In, R15In, HIIn, LOIn, Zin, PCin, IRin, MDRin, 
+INPORTin, Cin, Yin, BusMuxOut) is
+
+begin
+
+--test signals
+R0val <= busMuxR0in;
+R1val <= busMuxR1in;
+R2val <= busMuxR2in;
+R3val <= busMuxR3in;
+R4val <= busMuxR4in;
+R5val <= busMuxR5in;
+R6val <= busMuxR6in;
+R7val <= busMuxR7in;
+R8val <= busMuxR8in;
+R9val <= busMuxR9in;
+R10val <= busMuxR10in;
+R11val <= busMuxR11in;
+R12val <= busMuxR12in;
+R13val <= busMuxR13in;
+R14val <= busMuxR14in;
+R15val <= busMuxR15in;
+Yval <= YdataOut;
+ZLOval <= busMuxZlowin;
+ZHIval <= busMuxZhighin;
+MDRval <= busMuxMDRin;
+HIval <= busMuxHIin;
+LOval <= busMuxLOin;
+
+Busval <= BusMuxOut;
+
+end process;
 
 end architecture;											
 													

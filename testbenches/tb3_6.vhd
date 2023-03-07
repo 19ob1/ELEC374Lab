@@ -12,13 +12,14 @@ ARCHITECTURE behaviour OF tb3_6 is
 	SIGNAL PCout_tb, LOout_tb, HIout_tb, INPORTout_tb, MDRout_tb, Cout_tb: std_logic;
 	SIGNAL HIin_tb, LOin_tb, Zlowout_tb, Zhighout_tb, Cin_tb, INPORTin_tb, MARin_tb, Zin_tb, PCin_tb, MDRin_tb, IRin_tb, Yin_tb : std_logic;
 	
-	SIGNAL IncPC_tb, read_op_tb, and_op_tb, or_op_tb, add_op_tb, sub_op_tb, mult_op_tb, div_op_tb, shra_op_tb, shl_op_tb, shr_op_tb, ror_op_tb, rol_op_tb, neg_op_tb, not_op_tb: std_logic;
+	SIGNAL IncPC_tb, read_op_tb, and_op_tb, or_op_tb, add_op_tb, sub_op_tb, mult_op_tb, div_op_tb, shr_op_tb, shl_op_tb, ror_op_tb, rol_op_tb, neg_op_tb, not_op_tb, shra_op_tb: std_logic;
 	
 	signal R0in_tb, R1in_tb, R2in_tb, R3in_tb, R4in_tb, R5in_tb, R6in_tb, R7in_tb, R8in_tb, R9in_tb, R10in_tb, R11in_tb, R12in_tb, R13in_tb, R14in_tb, R15in_tb : std_logic;
 	signal R0out_tb, R1out_tb, R2out_tb, R3out_tb, R4out_tb, R5out_tb, R6out_tb, R7out_tb, R8out_tb, R9out_tb, R10out_tb, R11out_tb, R12out_tb, R13out_tb, R14out_tb, R15out_tb : std_logic; 
 	
 	SIGNAL clk_tb, clear_tb : std_logic;
 	SIGNAL Mdatain_tb : std_logic_vector (31 downto 0);
+	SIGNAL R0val, R1val, R2val, R3val, R4val, R5val, R6val, R7val, R8val, R9val, R10val, R11val, R12val, R13val, R14val, R15val, MDRval, Yval, ZLOval, ZHIval, Busval : std_logic_vector(31 downto 0);
 	TYPE State IS (default, Reg_load1a, Reg_load1b, Reg_load2a, Reg_load2b, Reg_load3a, Reg_load3b, T0, T1, T2, T3, T4, T5, T6);
 	SIGNAL Present_state: State:= default;
 --component instantiation of the datapath
@@ -31,10 +32,11 @@ PORT (
 	
 	R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out, R8out, R9out, R10out, R11out, R12out, R13out, R14out, R15out : in std_logic;
 	PCout, Zlowout, Zhighout, LOout, HIout, INPORTout, MDRout, Cout : in std_logic;
+	R0val, R1val, R2val, R3val, R4val, R5val, R6val, R7val, R8val, R9val, R10val, R11val, R12val, R13val, R14val, R15val, MDRval, Yval, ZLOval, ZHIval, HIval, LOval, Busval: out std_logic_vector(31 downto 0);
 	
-	incPc, read_op, and_op, or_op, add_op, sub_op, mult_op, div_op, shr_op, shl_op, ror_op, rol_op, neg_op, not_op, shra_op: in std_logic;
+	incPc, read_op, and_op, or_op, add_op, sub_op, mult_op, div_op, shr_op, shl_op, ror_op, rol_op, neg_op, not_op, shra_op : in std_logic;
 	clk, clear: in std_logic;
-	Mdatain : in std_logic_vector (31 downto 0)
+	Mdatain : in std_logic_vector (31 downto 0)	
 	);
 END COMPONENT datapath;
 
@@ -76,7 +78,7 @@ PORT MAP (
 	rol_op => rol_op_tb,  
 	neg_op=> neg_op_tb, 
 	not_op => not_op_tb,
-	shra_op => shra_op_tb,
+	shra_op => shra_op_tb, 
 	
 	R0in => R0in_tb, 
 	R1in => R1in_tb, 
@@ -111,6 +113,27 @@ PORT MAP (
 	R13out => R13Out_tb, 
 	R14out => R14Out_tb, 
 	R15out => R15Out_tb,
+	
+	R0val => R0val,
+	R1val => R1val,
+	R2val => R2val,
+	R3val => R3val,
+	R4val => R4val,
+	R5val => R5val,
+	R6val => R6val,
+	R7val => R7val,
+	R8val => R8val,
+	R9val => R9val,
+	R10val => R10val,
+	R11val => R11val,
+	R12val => R12val,
+	R13val => R13val,
+	R14val => R14val,
+	R15val => R15val,
+	MDRval => MDRval,
+	Yval => Yval,
+	ZLOval => ZLOval,
+	Busval => Busval,
 
 	clk=>clk_tb,
 	clear => clear_tb,
