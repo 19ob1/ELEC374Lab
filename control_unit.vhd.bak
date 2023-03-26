@@ -1,0 +1,10 @@
+library ieee;
+use ieee.std_logic_1164.all;
+entity control_unit is -- define the inputs and outputs to your Control Unit
+port (Clock, Reset, Stop, …, CON_FF: in std_logic;
+IR: in std_logic _vector(31 downto 0);
+Gra, Grb, Grc, Rin, …, Rout: out std_logic;
+Yin, Zin, PCout, IncPC, …, MARin: out std_logic;
+Read, Write, …, Clear: out std_logic;
+ADD, AND, …, SHR: out std_logic);
+end control_unit;

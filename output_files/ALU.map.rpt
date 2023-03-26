@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ALU
-Mon Mar 06 23:25:32 2023
+Sun Mar 26 15:04:35 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,13 +13,19 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. User-Specified and Inferred Latches
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Port Connectivity Checks: "reg32:regIR"
- 12. Port Connectivity Checks: "ALU:ALUunit|ADD32:incrementPC"
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. User-Specified and Inferred Latches
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for RAM:RAMunit|altsyncram:altsyncram_component|altsyncram_d8i1:auto_generated
+ 14. Parameter Settings for User Entity Instance: RAM:RAMunit|altsyncram:altsyncram_component
+ 15. altsyncram Parameter Settings by Entity Instance
+ 16. Port Connectivity Checks: "bus32to1:busUnit"
+ 17. Port Connectivity Checks: "encoder32to5:encoder"
+ 18. Port Connectivity Checks: "ALU:ALUunit|ADD32:incrementPC"
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
 
 
 
@@ -45,18 +51,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Mar 06 23:25:32 2023           ;
+; Analysis & Synthesis Status        ; Successful - Sun Mar 26 15:04:35 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; ALU                                             ;
 ; Top-level Entity Name              ; datapath                                        ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 7,592                                           ;
-;     Total combinational functions  ; 6,984                                           ;
-;     Dedicated logic registers      ; 736                                             ;
-; Total registers                    ; 736                                             ;
-; Total pins                         ; 835                                             ;
+; Total logic elements               ; 7,802                                           ;
+;     Total combinational functions  ; 7,089                                           ;
+;     Dedicated logic registers      ; 841                                             ;
+; Total registers                    ; 841                                             ;
+; Total pins                         ; 1,026                                           ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0                                               ;
+; Total memory bits                  ; 16,384                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
 ; Total PLLs                         ; 0                                               ;
 +------------------------------------+-------------------------------------------------+
@@ -160,31 +166,48 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                          ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                   ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------+---------+
-; reg32.vhd                        ; yes             ; User VHDL File  ; C:/altera/13.0sp1/elec374/ALU/reg32.vhd        ;         ;
-; encoder32to5.vhd                 ; yes             ; User VHDL File  ; C:/altera/13.0sp1/elec374/ALU/encoder32to5.vhd ;         ;
-; bus32to1.vhd                     ; yes             ; User VHDL File  ; C:/altera/13.0sp1/elec374/ALU/bus32to1.vhd     ;         ;
-; MDR.vhd                          ; yes             ; User VHDL File  ; C:/altera/13.0sp1/elec374/ALU/MDR.vhd          ;         ;
-; datapath.vhd                     ; yes             ; User VHDL File  ; C:/altera/13.0sp1/elec374/ALU/datapath.vhd     ;         ;
-; AND32.vhd                        ; yes             ; User VHDL File  ; C:/altera/13.0sp1/elec374/ALU/AND32.vhd        ;         ;
-; OR32.vhd                         ; yes             ; User VHDL File  ; C:/altera/13.0sp1/elec374/ALU/OR32.vhd         ;         ;
-; NEG32.vhd                        ; yes             ; User VHDL File  ; C:/altera/13.0sp1/elec374/ALU/NEG32.vhd        ;         ;
-; NOT32.vhd                        ; yes             ; User VHDL File  ; C:/altera/13.0sp1/elec374/ALU/NOT32.vhd        ;         ;
-; SHL32.vhd                        ; yes             ; User VHDL File  ; C:/altera/13.0sp1/elec374/ALU/SHL32.vhd        ;         ;
-; SHR32.vhd                        ; yes             ; User VHDL File  ; C:/altera/13.0sp1/elec374/ALU/SHR32.vhd        ;         ;
-; SHRA32.vhd                       ; yes             ; User VHDL File  ; C:/altera/13.0sp1/elec374/ALU/SHRA32.vhd       ;         ;
-; ROL32.vhd                        ; yes             ; User VHDL File  ; C:/altera/13.0sp1/elec374/ALU/ROL32.vhd        ;         ;
-; ROR32.vhd                        ; yes             ; User VHDL File  ; C:/altera/13.0sp1/elec374/ALU/ROR32.vhd        ;         ;
-; ADD32.vhd                        ; yes             ; User VHDL File  ; C:/altera/13.0sp1/elec374/ALU/ADD32.vhd        ;         ;
-; SUB32.vhd                        ; yes             ; User VHDL File  ; C:/altera/13.0sp1/elec374/ALU/SUB32.vhd        ;         ;
-; DIV32.vhd                        ; yes             ; User VHDL File  ; C:/altera/13.0sp1/elec374/ALU/DIV32.vhd        ;         ;
-; MUL32.vhd                        ; yes             ; User VHDL File  ; C:/altera/13.0sp1/elec374/ALU/MUL32.vhd        ;         ;
-; ALU.vhd                          ; yes             ; User VHDL File  ; C:/altera/13.0sp1/elec374/ALU/ALU.vhd          ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                    ;
++----------------------------------+-----------------+----------------------------------+-------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                            ; Library ;
++----------------------------------+-----------------+----------------------------------+-------------------------------------------------------------------------+---------+
+; initRAM.mif                      ; yes             ; User Memory Initialization File  ; C:/altera/13.0sp1/newlab/initRAM.mif                                    ;         ;
+; reg32.vhd                        ; yes             ; User VHDL File                   ; C:/altera/13.0sp1/newlab/reg32.vhd                                      ;         ;
+; encoder32to5.vhd                 ; yes             ; User VHDL File                   ; C:/altera/13.0sp1/newlab/encoder32to5.vhd                               ;         ;
+; bus32to1.vhd                     ; yes             ; User VHDL File                   ; C:/altera/13.0sp1/newlab/bus32to1.vhd                                   ;         ;
+; MDR.vhd                          ; yes             ; User VHDL File                   ; C:/altera/13.0sp1/newlab/MDR.vhd                                        ;         ;
+; datapath.vhd                     ; yes             ; User VHDL File                   ; C:/altera/13.0sp1/newlab/datapath.vhd                                   ;         ;
+; AND32.vhd                        ; yes             ; User VHDL File                   ; C:/altera/13.0sp1/newlab/AND32.vhd                                      ;         ;
+; OR32.vhd                         ; yes             ; User VHDL File                   ; C:/altera/13.0sp1/newlab/OR32.vhd                                       ;         ;
+; NEG32.vhd                        ; yes             ; User VHDL File                   ; C:/altera/13.0sp1/newlab/NEG32.vhd                                      ;         ;
+; NOT32.vhd                        ; yes             ; User VHDL File                   ; C:/altera/13.0sp1/newlab/NOT32.vhd                                      ;         ;
+; SHL32.vhd                        ; yes             ; User VHDL File                   ; C:/altera/13.0sp1/newlab/SHL32.vhd                                      ;         ;
+; SHR32.vhd                        ; yes             ; User VHDL File                   ; C:/altera/13.0sp1/newlab/SHR32.vhd                                      ;         ;
+; SHRA32.vhd                       ; yes             ; User VHDL File                   ; C:/altera/13.0sp1/newlab/SHRA32.vhd                                     ;         ;
+; ROL32.vhd                        ; yes             ; User VHDL File                   ; C:/altera/13.0sp1/newlab/ROL32.vhd                                      ;         ;
+; ROR32.vhd                        ; yes             ; User VHDL File                   ; C:/altera/13.0sp1/newlab/ROR32.vhd                                      ;         ;
+; ADD32.vhd                        ; yes             ; User VHDL File                   ; C:/altera/13.0sp1/newlab/ADD32.vhd                                      ;         ;
+; SUB32.vhd                        ; yes             ; User VHDL File                   ; C:/altera/13.0sp1/newlab/SUB32.vhd                                      ;         ;
+; DIV32.vhd                        ; yes             ; User VHDL File                   ; C:/altera/13.0sp1/newlab/DIV32.vhd                                      ;         ;
+; MUL32.vhd                        ; yes             ; User VHDL File                   ; C:/altera/13.0sp1/newlab/MUL32.vhd                                      ;         ;
+; ALU.vhd                          ; yes             ; User VHDL File                   ; C:/altera/13.0sp1/newlab/ALU.vhd                                        ;         ;
+; selandEncode.vhd                 ; yes             ; User VHDL File                   ; C:/altera/13.0sp1/newlab/selandEncode.vhd                               ;         ;
+; RAM.vhd                          ; yes             ; User Wizard-Generated File       ; C:/altera/13.0sp1/newlab/RAM.vhd                                        ;         ;
+; reg0.vhd                         ; yes             ; User VHDL File                   ; C:/altera/13.0sp1/newlab/reg0.vhd                                       ;         ;
+; CONFF.vhd                        ; yes             ; User VHDL File                   ; C:/altera/13.0sp1/newlab/CONFF.vhd                                      ;         ;
+; MARreg.vhd                       ; yes             ; User VHDL File                   ; C:/altera/13.0sp1/newlab/MARreg.vhd                                     ;         ;
+; preloadVal.vhd                   ; yes             ; User VHDL File                   ; C:/altera/13.0sp1/newlab/preloadVal.vhd                                 ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_d8i1.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/altera/13.0sp1/newlab/db/altsyncram_d8i1.tdf                         ;         ;
++----------------------------------+-----------------+----------------------------------+-------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -192,80 +215,113 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 7,592     ;
+; Estimated Total logic elements              ; 7,802     ;
 ;                                             ;           ;
-; Total combinational functions               ; 6984      ;
+; Total combinational functions               ; 7089      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 3456      ;
-;     -- 3 input functions                    ; 3132      ;
-;     -- <=2 input functions                  ; 396       ;
+;     -- 4 input functions                    ; 3560      ;
+;     -- 3 input functions                    ; 3114      ;
+;     -- <=2 input functions                  ; 415       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 5164      ;
+;     -- normal mode                          ; 5269      ;
 ;     -- arithmetic mode                      ; 1820      ;
 ;                                             ;           ;
-; Total registers                             ; 736       ;
-;     -- Dedicated logic registers            ; 736       ;
+; Total registers                             ; 841       ;
+;     -- Dedicated logic registers            ; 841       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 835       ;
+; I/O pins                                    ; 1026      ;
+; Total memory bits                           ; 16384     ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 736       ;
-; Total fan-out                               ; 28587     ;
-; Average fan-out                             ; 3.04      ;
+; Maximum fan-out                             ; 873       ;
+; Total fan-out                               ; 30184     ;
+; Average fan-out                             ; 3.01      ;
 +---------------------------------------------+-----------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                             ;
-+------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+--------------+
-; Compilation Hierarchy Node   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                   ; Library Name ;
-+------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+--------------+
-; |datapath                    ; 6984 (1)          ; 736 (0)      ; 0           ; 0            ; 0       ; 0         ; 835  ; 0            ; |datapath                                             ; work         ;
-;    |ALU:ALUunit|             ; 6426 (591)        ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:ALUunit                                 ; work         ;
-;       |ADD32:addition|       ; 58 (58)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:ALUunit|ADD32:addition                  ; work         ;
-;       |ADD32:incrementPC|    ; 21 (21)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:ALUunit|ADD32:incrementPC               ; work         ;
-;       |AND32:andoperation|   ; 24 (24)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:ALUunit|AND32:andoperation              ; work         ;
-;       |DIV32:division|       ; 2109 (2109)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:ALUunit|DIV32:division                  ; work         ;
-;       |MUL32:multiplication| ; 2371 (2371)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:ALUunit|MUL32:multiplication            ; work         ;
-;       |OR32:oroperation|     ; 26 (26)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:ALUunit|OR32:oroperation                ; work         ;
-;       |ROL32:rotateleft|     ; 432 (432)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:ALUunit|ROL32:rotateleft                ; work         ;
-;       |ROR32:rotateright|    ; 465 (465)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:ALUunit|ROR32:rotateright               ; work         ;
-;       |SHL32:shiftoleft|     ; 126 (126)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:ALUunit|SHL32:shiftoleft                ; work         ;
-;       |SHR32:shifttoright|   ; 69 (69)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:ALUunit|SHR32:shifttoright              ; work         ;
-;       |SHRA32:shiftA|        ; 42 (42)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:ALUunit|SHRA32:shiftA                   ; work         ;
-;       |SUB32:substraction|   ; 92 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:ALUunit|SUB32:substraction              ; work         ;
-;          |ADD32:SUBADD|      ; 60 (60)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:ALUunit|SUB32:substraction|ADD32:SUBADD ; work         ;
-;          |NEG32:SUBNEG|      ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:ALUunit|SUB32:substraction|NEG32:SUBNEG ; work         ;
-;    |MDR:MDRunit|             ; 32 (32)           ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|MDR:MDRunit                                 ; work         ;
-;       |reg32:MDRregister|    ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|MDR:MDRunit|reg32:MDRregister               ; work         ;
-;    |bus32to1:busUnit|        ; 462 (462)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|bus32to1:busUnit                            ; work         ;
-;    |encoder32to5:encoder|    ; 29 (29)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|encoder32to5:encoder                        ; work         ;
-;    |reg32:reg0|              ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:reg0                                  ; work         ;
-;    |reg32:reg10|             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:reg10                                 ; work         ;
-;    |reg32:reg11|             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:reg11                                 ; work         ;
-;    |reg32:reg12|             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:reg12                                 ; work         ;
-;    |reg32:reg13|             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:reg13                                 ; work         ;
-;    |reg32:reg14|             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:reg14                                 ; work         ;
-;    |reg32:reg15|             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:reg15                                 ; work         ;
-;    |reg32:reg1|              ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:reg1                                  ; work         ;
-;    |reg32:reg2|              ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:reg2                                  ; work         ;
-;    |reg32:reg3|              ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:reg3                                  ; work         ;
-;    |reg32:reg4|              ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:reg4                                  ; work         ;
-;    |reg32:reg5|              ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:reg5                                  ; work         ;
-;    |reg32:reg6|              ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:reg6                                  ; work         ;
-;    |reg32:reg7|              ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:reg7                                  ; work         ;
-;    |reg32:reg8|              ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:reg8                                  ; work         ;
-;    |reg32:reg9|              ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:reg9                                  ; work         ;
-;    |reg32:regHI|             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:regHI                                 ; work         ;
-;    |reg32:regLO|             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:regLO                                 ; work         ;
-;    |reg32:regPC|             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:regPC                                 ; work         ;
-;    |reg32:regY|              ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:regY                                  ; work         ;
-;    |reg32:regZhigh|          ; 2 (2)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:regZhigh                              ; work         ;
-;    |reg32:regZlow|           ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:regZlow                               ; work         ;
-+------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                         ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                  ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------+--------------+
+; |datapath                                 ; 7089 (1)          ; 841 (0)      ; 16384       ; 0            ; 0       ; 0         ; 1026 ; 0            ; |datapath                                                                            ; work         ;
+;    |ALU:ALUunit|                          ; 6418 (595)        ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:ALUunit                                                                ; work         ;
+;       |ADD32:addition|                    ; 60 (60)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:ALUunit|ADD32:addition                                                 ; work         ;
+;       |ADD32:incrementPC|                 ; 21 (21)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:ALUunit|ADD32:incrementPC                                              ; work         ;
+;       |AND32:andoperation|                ; 27 (27)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:ALUunit|AND32:andoperation                                             ; work         ;
+;       |DIV32:division|                    ; 2109 (2109)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:ALUunit|DIV32:division                                                 ; work         ;
+;       |MUL32:multiplication|              ; 2371 (2371)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:ALUunit|MUL32:multiplication                                           ; work         ;
+;       |OR32:oroperation|                  ; 21 (21)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:ALUunit|OR32:oroperation                                               ; work         ;
+;       |ROL32:rotateleft|                  ; 431 (431)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:ALUunit|ROL32:rotateleft                                               ; work         ;
+;       |ROR32:rotateright|                 ; 451 (451)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:ALUunit|ROR32:rotateright                                              ; work         ;
+;       |SHL32:shiftoleft|                  ; 126 (126)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:ALUunit|SHL32:shiftoleft                                               ; work         ;
+;       |SHR32:shifttoright|                ; 69 (69)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:ALUunit|SHR32:shifttoright                                             ; work         ;
+;       |SHRA32:shiftA|                     ; 45 (45)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:ALUunit|SHRA32:shiftA                                                  ; work         ;
+;       |SUB32:substraction|                ; 92 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:ALUunit|SUB32:substraction                                             ; work         ;
+;          |ADD32:SUBADD|                   ; 60 (60)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:ALUunit|SUB32:substraction|ADD32:SUBADD                                ; work         ;
+;          |NEG32:SUBNEG|                   ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:ALUunit|SUB32:substraction|NEG32:SUBNEG                                ; work         ;
+;    |MARreg:MARregister|                   ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|MARreg:MARregister                                                         ; work         ;
+;    |MDR:MDRunit|                          ; 32 (32)           ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|MDR:MDRunit                                                                ; work         ;
+;       |reg32:MDRregister|                 ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|MDR:MDRunit|reg32:MDRregister                                              ; work         ;
+;    |RAM:RAMunit|                          ; 0 (0)             ; 0 (0)        ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RAM:RAMunit                                                                ; work         ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RAM:RAMunit|altsyncram:altsyncram_component                                ; work         ;
+;          |altsyncram_d8i1:auto_generated| ; 0 (0)             ; 0 (0)        ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|RAM:RAMunit|altsyncram:altsyncram_component|altsyncram_d8i1:auto_generated ; work         ;
+;    |bus32to1:busUnit|                     ; 517 (517)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|bus32to1:busUnit                                                           ; work         ;
+;    |conFF:CONFFunit|                      ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|conFF:CONFFunit                                                            ; work         ;
+;    |encoder32to5:encoder|                 ; 41 (41)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|encoder32to5:encoder                                                       ; work         ;
+;    |preloadVal:R1preload|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|preloadVal:R1preload                                                       ; work         ;
+;    |preloadVal:R2preload|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|preloadVal:R2preload                                                       ; work         ;
+;    |preloadVal:R3preload|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|preloadVal:R3preload                                                       ; work         ;
+;    |preloadVal:R4preload|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|preloadVal:R4preload                                                       ; work         ;
+;    |preloadVal:R6preload|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|preloadVal:R6preload                                                       ; work         ;
+;    |reg0:register0|                       ; 1 (1)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg0:register0                                                             ; work         ;
+;    |reg32:reg10|                          ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:reg10                                                                ; work         ;
+;    |reg32:reg11|                          ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:reg11                                                                ; work         ;
+;    |reg32:reg12|                          ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:reg12                                                                ; work         ;
+;    |reg32:reg13|                          ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:reg13                                                                ; work         ;
+;    |reg32:reg14|                          ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:reg14                                                                ; work         ;
+;    |reg32:reg15|                          ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:reg15                                                                ; work         ;
+;    |reg32:reg1|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:reg1                                                                 ; work         ;
+;    |reg32:reg2|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:reg2                                                                 ; work         ;
+;    |reg32:reg3|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:reg3                                                                 ; work         ;
+;    |reg32:reg4|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:reg4                                                                 ; work         ;
+;    |reg32:reg5|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:reg5                                                                 ; work         ;
+;    |reg32:reg6|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:reg6                                                                 ; work         ;
+;    |reg32:reg7|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:reg7                                                                 ; work         ;
+;    |reg32:reg8|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:reg8                                                                 ; work         ;
+;    |reg32:reg9|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:reg9                                                                 ; work         ;
+;    |reg32:regHI|                          ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:regHI                                                                ; work         ;
+;    |reg32:regINPORT|                      ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:regINPORT                                                            ; work         ;
+;    |reg32:regIR|                          ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:regIR                                                                ; work         ;
+;    |reg32:regLO|                          ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:regLO                                                                ; work         ;
+;    |reg32:regOUTPORT|                     ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:regOUTPORT                                                           ; work         ;
+;    |reg32:regPC|                          ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:regPC                                                                ; work         ;
+;    |reg32:regY|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:regY                                                                 ; work         ;
+;    |reg32:regZhigh|                       ; 2 (2)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:regZhigh                                                             ; work         ;
+;    |reg32:regZlow|                        ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg32:regZlow                                                              ; work         ;
+;    |selEncode:selectAndEnocde|            ; 34 (34)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|selEncode:selectAndEnocde                                                  ; work         ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                             ;
++---------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+-------------+
+; Name                                                                                  ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF         ;
++---------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+-------------+
+; RAM:RAMunit|altsyncram:altsyncram_component|altsyncram_d8i1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 512          ; 32           ; --           ; --           ; 16384 ; initRAM.mif ;
++---------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                    ;
++--------+--------------+---------+--------------+--------------+-----------------------+----------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance       ; IP Include File                  ;
++--------+--------------+---------+--------------+--------------+-----------------------+----------------------------------+
+; Altera ; RAM: 1-PORT  ; N/A     ; N/A          ; N/A          ; |datapath|RAM:RAMunit ; C:/altera/13.0sp1/newlab/RAM.vhd ;
++--------+--------------+---------+--------------+--------------+-----------------------+----------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------+
@@ -273,6 +329,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------+---------------------+------------------------+
 ; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
 +-----------------------------------------------------+---------------------+------------------------+
+; conFF:CONFFunit|CONFFoutput                         ; CONFFinput          ; yes                    ;
+; encoder32to5:encoder|output[1]                      ; GND                 ; yes                    ;
+; encoder32to5:encoder|output[2]                      ; GND                 ; yes                    ;
+; encoder32to5:encoder|output[3]                      ; GND                 ; yes                    ;
+; encoder32to5:encoder|output[4]                      ; GND                 ; yes                    ;
+; encoder32to5:encoder|output[0]                      ; GND                 ; yes                    ;
 ; ALU:ALUunit|MUL32:multiplication|one[0]_7184        ; VCC                 ; yes                    ;
 ; ALU:ALUunit|MUL32:multiplication|one[1]_7204        ; VCC                 ; yes                    ;
 ; ALU:ALUunit|MUL32:multiplication|one[2]_7224        ; VCC                 ; yes                    ;
@@ -307,7 +369,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ALU:ALUunit|MUL32:multiplication|one[31]_7804       ; VCC                 ; yes                    ;
 ; ALU:ALUunit|MUL32:multiplication|one[61]_8404       ; VCC                 ; yes                    ;
 ; ALU:ALUunit|MUL32:multiplication|one[63]_8424       ; VCC                 ; yes                    ;
-; Number of user-specified and inferred latches = 34  ;                     ;                        ;
+; Number of user-specified and inferred latches = 40  ;                     ;                        ;
 +-----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -317,12 +379,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 736   ;
+; Total registers                              ; 841   ;
 ; Number of registers using Synchronous Clear  ; 1     ;
 ; Number of registers using Synchronous Load   ; 33    ;
-; Number of registers using Asynchronous Clear ; 736   ;
+; Number of registers using Asynchronous Clear ; 841   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 736   ;
+; Number of registers using Clock Enable       ; 841   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -337,7 +399,6 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; 4:1                ; 28 bits   ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |datapath|ALU:ALUunit|MUL32:multiplication|one     ;
 ; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |datapath|ALU:ALUunit|MUL32:multiplication|one     ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |datapath|ALU:ALUunit|MUL32:multiplication|one[63] ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |datapath|ALU:ALUunit|MUL32:multiplication|one     ;
 ; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |datapath|ALU:ALUunit|MUL32:multiplication|one     ;
 ; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; No         ; |datapath|ALU:ALUunit|MUL32:multiplication|one     ;
 ; 5:1                ; 13 bits   ; 39 LEs        ; 26 LEs               ; 13 LEs                 ; No         ; |datapath|ALU:ALUunit|MUL32:multiplication|one     ;
@@ -360,10 +421,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; 6:1                ; 19 bits   ; 76 LEs        ; 57 LEs               ; 19 LEs                 ; No         ; |datapath|ALU:ALUunit|MUL32:multiplication|one     ;
 ; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |datapath|ALU:ALUunit|MUL32:multiplication|one     ;
 ; 6:1                ; 21 bits   ; 84 LEs        ; 63 LEs               ; 21 LEs                 ; No         ; |datapath|ALU:ALUunit|MUL32:multiplication|one     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |datapath|ALU:ALUunit|MUL32:multiplication|one     ;
+; 32:1               ; 18 bits   ; 378 LEs       ; 288 LEs              ; 90 LEs                 ; No         ; |datapath|bus32to1:busUnit|bus_mux_out[4]          ;
 ; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |datapath|ALU:ALUunit|MUL32:multiplication|one     ;
-; 7:1                ; 27 bits   ; 108 LEs       ; 108 LEs              ; 0 LEs                  ; No         ; |datapath|ALU:ALUunit|MUL32:multiplication|one[33] ;
-; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |datapath|ALU:ALUunit|MUL32:multiplication|one[60] ;
-; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |datapath|ALU:ALUunit|MUL32:multiplication|one[20] ;
+; 7:1                ; 27 bits   ; 108 LEs       ; 108 LEs              ; 0 LEs                  ; No         ; |datapath|ALU:ALUunit|MUL32:multiplication|one[49] ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |datapath|ALU:ALUunit|MUL32:multiplication|one[59] ;
+; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |datapath|ALU:ALUunit|MUL32:multiplication|one[1]  ;
 ; 8:1                ; 30 bits   ; 150 LEs       ; 90 LEs               ; 60 LEs                 ; No         ; |datapath|ALU:ALUunit|MUL32:multiplication|one     ;
 ; 8:1                ; 28 bits   ; 140 LEs       ; 84 LEs               ; 56 LEs                 ; No         ; |datapath|ALU:ALUunit|MUL32:multiplication|one     ;
 ; 8:1                ; 26 bits   ; 130 LEs       ; 78 LEs               ; 52 LEs                 ; No         ; |datapath|ALU:ALUunit|MUL32:multiplication|one     ;
@@ -376,19 +439,128 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; 8:1                ; 12 bits   ; 60 LEs        ; 36 LEs               ; 24 LEs                 ; No         ; |datapath|ALU:ALUunit|MUL32:multiplication|one     ;
 ; 8:1                ; 10 bits   ; 50 LEs        ; 30 LEs               ; 20 LEs                 ; No         ; |datapath|ALU:ALUunit|MUL32:multiplication|one     ;
 ; 8:1                ; 8 bits    ; 40 LEs        ; 24 LEs               ; 16 LEs                 ; No         ; |datapath|ALU:ALUunit|MUL32:multiplication|one     ;
-; 34:1               ; 32 bits   ; 704 LEs       ; 448 LEs              ; 256 LEs                ; No         ; |datapath|bus32to1:busUnit|bus_mux_out[26]         ;
-; 19:1               ; 2 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |datapath|encoder32to5:encoder|output              ;
-; 20:1               ; 2 bits    ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |datapath|encoder32to5:encoder|output              ;
+; 29:1               ; 14 bits   ; 266 LEs       ; 224 LEs              ; 42 LEs                 ; No         ; |datapath|bus32to1:busUnit|bus_mux_out[20]         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg32:regIR"                                                                           ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; outputq ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------+
+; Source assignments for RAM:RAMunit|altsyncram:altsyncram_component|altsyncram_d8i1:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------------+
+; Assignment                      ; Value              ; From ; To                                  ;
++---------------------------------+--------------------+------+-------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                   ;
++---------------------------------+--------------------+------+-------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RAM:RAMunit|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+------------------------------+
+; Parameter Name                     ; Value                ; Type                         ;
++------------------------------------+----------------------+------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                      ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                   ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                 ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                 ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE               ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                      ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                      ;
+; WIDTH_A                            ; 32                   ; Signed Integer               ;
+; WIDTHAD_A                          ; 9                    ; Signed Integer               ;
+; NUMWORDS_A                         ; 512                  ; Signed Integer               ;
+; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                      ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                      ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                      ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                      ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                      ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                      ;
+; WIDTH_B                            ; 1                    ; Untyped                      ;
+; WIDTHAD_B                          ; 1                    ; Untyped                      ;
+; NUMWORDS_B                         ; 1                    ; Untyped                      ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                      ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                      ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                      ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                      ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                      ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                      ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                      ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                      ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                      ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                      ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                      ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                      ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer               ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                      ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                      ;
+; BYTE_SIZE                          ; 8                    ; Untyped                      ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                      ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                      ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                      ;
+; INIT_FILE                          ; initRAM.mif          ; Untyped                      ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                      ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                      ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                      ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                      ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                      ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                      ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                      ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                      ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                      ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                      ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                      ;
+; DEVICE_FAMILY                      ; Cyclone III          ; Untyped                      ;
+; CBXI_PARAMETER                     ; altsyncram_d8i1      ; Untyped                      ;
++------------------------------------+----------------------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                        ;
++-------------------------------------------+---------------------------------------------+
+; Name                                      ; Value                                       ;
++-------------------------------------------+---------------------------------------------+
+; Number of entity instances                ; 1                                           ;
+; Entity Instance                           ; RAM:RAMunit|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                 ;
+;     -- WIDTH_A                            ; 32                                          ;
+;     -- NUMWORDS_A                         ; 512                                         ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                      ;
+;     -- WIDTH_B                            ; 1                                           ;
+;     -- NUMWORDS_B                         ; 1                                           ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                      ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                        ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                   ;
++-------------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "bus32to1:busUnit" ;
++-------+-------+----------+-------------------+
+; Port  ; Type  ; Severity ; Details           ;
++-------+-------+----------+-------------------+
+; mux25 ; Input ; Info     ; Stuck at GND      ;
+; mux26 ; Input ; Info     ; Stuck at GND      ;
+; mux27 ; Input ; Info     ; Stuck at GND      ;
+; mux28 ; Input ; Info     ; Stuck at GND      ;
+; mux29 ; Input ; Info     ; Stuck at GND      ;
+; mux30 ; Input ; Info     ; Stuck at GND      ;
+; mux31 ; Input ; Info     ; Stuck at GND      ;
++-------+-------+----------+-------------------+
+
+
++--------------------------------------------------+
+; Port Connectivity Checks: "encoder32to5:encoder" ;
++------+-------+----------+------------------------+
+; Port ; Type  ; Severity ; Details                ;
++------+-------+----------+------------------------+
+; in25 ; Input ; Info     ; Stuck at GND           ;
+; in26 ; Input ; Info     ; Stuck at GND           ;
+; in27 ; Input ; Info     ; Stuck at GND           ;
+; in28 ; Input ; Info     ; Stuck at GND           ;
+; in29 ; Input ; Info     ; Stuck at GND           ;
+; in30 ; Input ; Info     ; Stuck at GND           ;
+; in31 ; Input ; Info     ; Stuck at GND           ;
++------+-------+----------+------------------------+
 
 
 +-----------------------------------------------------------+
@@ -406,7 +578,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:01:02     ;
+; Top            ; 00:00:51     ;
 +----------------+--------------+
 
 
@@ -416,7 +588,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Mar 06 23:24:26 2023
+    Info: Processing started: Sun Mar 26 15:03:40 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file reg32.vhd
@@ -476,71 +648,122 @@ Info (12021): Found 2 design units, including 1 entities, in source file mul32.v
 Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
     Info (12022): Found design unit 1: ALU-behavioural
     Info (12023): Found entity 1: ALU
-Info (12021): Found 2 design units, including 1 entities, in source file tb3_1.vhd
-    Info (12022): Found design unit 1: tb3_1-behaviour
-    Info (12023): Found entity 1: tb3_1
-Info (12021): Found 2 design units, including 1 entities, in source file tb3_2.vhd
-    Info (12022): Found design unit 1: tb3_2-behaviour
-    Info (12023): Found entity 1: tb3_2
-Info (12021): Found 2 design units, including 1 entities, in source file tb3_7.vhd
-    Info (12022): Found design unit 1: tb3_7-behaviour
-    Info (12023): Found entity 1: tb3_7
-Info (12021): Found 2 design units, including 1 entities, in source file tb3_8.vhd
-    Info (12022): Found design unit 1: tb3_8-behaviour
-    Info (12023): Found entity 1: tb3_8
-Info (12021): Found 2 design units, including 1 entities, in source file tb3_9.vhd
-    Info (12022): Found design unit 1: tb3_9-behaviour
-    Info (12023): Found entity 1: tb3_9
-Info (12021): Found 2 design units, including 1 entities, in source file tb3_13.vhd
-    Info (12022): Found design unit 1: tb3_13-behaviour
-    Info (12023): Found entity 1: tb3_13
-Info (12021): Found 2 design units, including 1 entities, in source file tb3_10.vhd
-    Info (12022): Found design unit 1: tb3_10-behaviour
-    Info (12023): Found entity 1: tb3_10
-Info (12021): Found 2 design units, including 1 entities, in source file tb3_11.vhd
-    Info (12022): Found design unit 1: tb3_11-behaviour
-    Info (12023): Found entity 1: tb3_11
-Info (12021): Found 2 design units, including 1 entities, in source file tb3_12.vhd
-    Info (12022): Found design unit 1: tb3_12-behaviour
-    Info (12023): Found entity 1: tb3_12
-Info (12021): Found 2 design units, including 1 entities, in source file tb3_3.vhd
-    Info (12022): Found design unit 1: tb3_3-behaviour
-    Info (12023): Found entity 1: tb3_3
-Info (12021): Found 2 design units, including 1 entities, in source file tb3_4.vhd
-    Info (12022): Found design unit 1: tb3_4-behaviour
-    Info (12023): Found entity 1: tb3_4
-Info (12021): Found 2 design units, including 1 entities, in source file tb3_6.vhd
-    Info (12022): Found design unit 1: tb3_6-behaviour
-    Info (12023): Found entity 1: tb3_6
-Info (12021): Found 2 design units, including 1 entities, in source file tb3_5.vhd
-    Info (12022): Found design unit 1: tb3_5-behaviour
-    Info (12023): Found entity 1: tb3_5
+Warning (12019): Can't analyze file -- file tb3_1.vhd is missing
+Warning (12019): Can't analyze file -- file tb3_2.vhd is missing
+Warning (12019): Can't analyze file -- file tb3_7.vhd is missing
+Warning (12019): Can't analyze file -- file tb3_8.vhd is missing
+Warning (12019): Can't analyze file -- file tb3_9.vhd is missing
+Warning (12019): Can't analyze file -- file tb3_13.vhd is missing
+Warning (12019): Can't analyze file -- file tb3_10.vhd is missing
+Warning (12019): Can't analyze file -- file tb3_11.vhd is missing
+Warning (12019): Can't analyze file -- file tb3_12.vhd is missing
+Warning (12019): Can't analyze file -- file tb3_3.vhd is missing
+Warning (12019): Can't analyze file -- file tb3_4.vhd is missing
+Warning (12019): Can't analyze file -- file tb3_6.vhd is missing
+Warning (12019): Can't analyze file -- file tb3_5.vhd is missing
+Info (12021): Found 2 design units, including 1 entities, in source file selandencode.vhd
+    Info (12022): Found design unit 1: selEncode-behaviour
+    Info (12023): Found entity 1: selEncode
+Info (12021): Found 2 design units, including 1 entities, in source file ram.vhd
+    Info (12022): Found design unit 1: ram-SYN
+    Info (12023): Found entity 1: RAM
+Info (12021): Found 2 design units, including 1 entities, in source file reg0.vhd
+    Info (12022): Found design unit 1: reg0-behaviour
+    Info (12023): Found entity 1: reg0
+Info (12021): Found 2 design units, including 1 entities, in source file conff.vhd
+    Info (12022): Found design unit 1: conFF-behaviour
+    Info (12023): Found entity 1: conFF
+Info (12021): Found 2 design units, including 1 entities, in source file marreg.vhd
+    Info (12022): Found design unit 1: MARreg-behaviour
+    Info (12023): Found entity 1: MARreg
+Info (12021): Found 2 design units, including 1 entities, in source file ld_tb.vhd
+    Info (12022): Found design unit 1: ld_tb-arch
+    Info (12023): Found entity 1: ld_tb
+Info (12021): Found 2 design units, including 1 entities, in source file preloadval.vhd
+    Info (12022): Found design unit 1: preloadVal-logic
+    Info (12023): Found entity 1: preloadVal
+Info (12021): Found 2 design units, including 1 entities, in source file ld2_tb.vhd
+    Info (12022): Found design unit 1: ld2_tb-arch
+    Info (12023): Found entity 1: ld2_tb
+Info (12021): Found 2 design units, including 1 entities, in source file ldi_tb.vhd
+    Info (12022): Found design unit 1: ldi_tb-arch
+    Info (12023): Found entity 1: ldi_tb
+Info (12021): Found 2 design units, including 1 entities, in source file ldi2_tb.vhd
+    Info (12022): Found design unit 1: ldi2_tb-arch
+    Info (12023): Found entity 1: ldi2_tb
+Info (12021): Found 2 design units, including 1 entities, in source file st1_tb.vhd
+    Info (12022): Found design unit 1: st1_tb-arch
+    Info (12023): Found entity 1: st1_tb
+Info (12021): Found 2 design units, including 1 entities, in source file st2_tb.vhd
+    Info (12022): Found design unit 1: st2_tb-ld_tb_arch
+    Info (12023): Found entity 1: st2_tb
+Info (12021): Found 2 design units, including 1 entities, in source file addi_tb.vhd
+    Info (12022): Found design unit 1: addi_tb-ld_tb_arch
+    Info (12023): Found entity 1: addi_tb
+Info (12021): Found 2 design units, including 1 entities, in source file andi_tb.vhd
+    Info (12022): Found design unit 1: andi_tb-ld_tb_arch
+    Info (12023): Found entity 1: andi_tb
+Info (12021): Found 2 design units, including 1 entities, in source file ori_tb.vhd
+    Info (12022): Found design unit 1: ori_tb-ld_tb_arch
+    Info (12023): Found entity 1: ori_tb
+Info (12021): Found 2 design units, including 1 entities, in source file brzr_tb.vhd
+    Info (12022): Found design unit 1: brzr_tb-ld_tb_arch
+    Info (12023): Found entity 1: brzr_tb
+Info (12021): Found 2 design units, including 1 entities, in source file jr_tb.vhd
+    Info (12022): Found design unit 1: jr_tb-ld_tb_arch
+    Info (12023): Found entity 1: jr_tb
+Info (12021): Found 2 design units, including 1 entities, in source file jal_tb.vhd
+    Info (12022): Found design unit 1: jal_tb-ld_tb_arch
+    Info (12023): Found entity 1: jal_tb
+Info (12021): Found 2 design units, including 1 entities, in source file mfhi_tb.vhd
+    Info (12022): Found design unit 1: mfhi_tb-ld_tb_arch
+    Info (12023): Found entity 1: mfhi_tb
+Info (12021): Found 2 design units, including 1 entities, in source file mflo_tb.vhd
+    Info (12022): Found design unit 1: mflo_tb-ld_tb_arch
+    Info (12023): Found entity 1: mflo_tb
+Info (12021): Found 2 design units, including 1 entities, in source file in_tb.vhd
+    Info (12022): Found design unit 1: in_tb-ld_tb_arch
+    Info (12023): Found entity 1: in_tb
+Info (12021): Found 2 design units, including 1 entities, in source file out_tb.vhd
+    Info (12022): Found design unit 1: out_tb-ld_tb_arch
+    Info (12023): Found entity 1: out_tb
+Info (12021): Found 2 design units, including 1 entities, in source file brnz_tb.vhd
+    Info (12022): Found design unit 1: brnz_tb-ld_tb_arch
+    Info (12023): Found entity 1: brnz_tb
+Info (12021): Found 2 design units, including 1 entities, in source file brpl_tb.vhd
+    Info (12022): Found design unit 1: brpl_tb-ld_tb_arch
+    Info (12023): Found entity 1: brpl_tb
+Info (12021): Found 2 design units, including 1 entities, in source file brmi_tb.vhd
+    Info (12022): Found design unit 1: brmi_tb-ld_tb_arch
+    Info (12023): Found entity 1: brmi_tb
 Info (12127): Elaborating entity "datapath" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(86): object "IRwire" assigned a value but never read
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(92): used implicit default value for signal "busMuxCin" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(92): used implicit default value for signal "busMuxINPORTin" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10492): VHDL Process Statement warning at datapath.vhd(225): signal "busMuxR0in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at datapath.vhd(226): signal "busMuxR1in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at datapath.vhd(227): signal "busMuxR2in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at datapath.vhd(228): signal "busMuxR3in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at datapath.vhd(229): signal "busMuxR4in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at datapath.vhd(230): signal "busMuxR5in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at datapath.vhd(231): signal "busMuxR6in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at datapath.vhd(232): signal "busMuxR7in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at datapath.vhd(233): signal "busMuxR8in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at datapath.vhd(234): signal "busMuxR9in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at datapath.vhd(235): signal "busMuxR10in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at datapath.vhd(236): signal "busMuxR11in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at datapath.vhd(237): signal "busMuxR12in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at datapath.vhd(238): signal "busMuxR13in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at datapath.vhd(239): signal "busMuxR14in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at datapath.vhd(240): signal "busMuxR15in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at datapath.vhd(241): signal "YdataOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at datapath.vhd(242): signal "busMuxZlowin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at datapath.vhd(243): signal "busMuxZhighin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at datapath.vhd(244): signal "busMuxMDRin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at datapath.vhd(245): signal "busMuxHIin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at datapath.vhd(246): signal "busMuxLOin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at datapath.vhd(405): signal "busMuxR0in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at datapath.vhd(406): signal "busMuxR1in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at datapath.vhd(407): signal "busMuxR2in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at datapath.vhd(408): signal "busMuxR3in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at datapath.vhd(409): signal "busMuxR4in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at datapath.vhd(410): signal "busMuxR5in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at datapath.vhd(411): signal "busMuxR6in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at datapath.vhd(412): signal "busMuxR7in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at datapath.vhd(413): signal "busMuxR8in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at datapath.vhd(414): signal "busMuxR9in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at datapath.vhd(415): signal "busMuxR10in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at datapath.vhd(416): signal "busMuxR11in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at datapath.vhd(417): signal "busMuxR12in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at datapath.vhd(418): signal "busMuxR13in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at datapath.vhd(419): signal "busMuxR14in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at datapath.vhd(420): signal "busMuxR15in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at datapath.vhd(421): signal "YdataOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at datapath.vhd(422): signal "busMuxZlowin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at datapath.vhd(423): signal "busMuxZhighin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at datapath.vhd(424): signal "busMuxMDRin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at datapath.vhd(425): signal "busMuxHIin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at datapath.vhd(426): signal "busMuxLOin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at datapath.vhd(427): signal "IRwire" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at datapath.vhd(428): signal "MARout" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at datapath.vhd(430): signal "busMuxPCin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at datapath.vhd(431): signal "busMuxCin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at datapath.vhd(432): signal "OUTPORTout" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALUunit"
 Info (12128): Elaborating entity "AND32" for hierarchy "ALU:ALUunit|AND32:andoperation"
 Info (12128): Elaborating entity "OR32" for hierarchy "ALU:ALUunit|OR32:oroperation"
@@ -628,26 +851,122 @@ Warning (10631): VHDL Process Statement warning at DIV32.vhd(15): inferring latc
 Info (10041): Inferred latch for "divisorflag" at DIV32.vhd(32)
 Info (10041): Inferred latch for "dividendflag" at DIV32.vhd(28)
 Info (12128): Elaborating entity "encoder32to5" for hierarchy "encoder32to5:encoder"
+Info (10041): Inferred latch for "output[0]" at encoder32to5.vhd(17)
+Info (10041): Inferred latch for "output[1]" at encoder32to5.vhd(17)
+Info (10041): Inferred latch for "output[2]" at encoder32to5.vhd(17)
+Info (10041): Inferred latch for "output[3]" at encoder32to5.vhd(17)
+Info (10041): Inferred latch for "output[4]" at encoder32to5.vhd(17)
 Info (12128): Elaborating entity "bus32to1" for hierarchy "bus32to1:busUnit"
+Info (10041): Inferred latch for "bus_mux_out[0]" at bus32to1.vhd(18)
+Info (10041): Inferred latch for "bus_mux_out[1]" at bus32to1.vhd(18)
+Info (10041): Inferred latch for "bus_mux_out[2]" at bus32to1.vhd(18)
+Info (10041): Inferred latch for "bus_mux_out[3]" at bus32to1.vhd(18)
+Info (10041): Inferred latch for "bus_mux_out[4]" at bus32to1.vhd(18)
+Info (10041): Inferred latch for "bus_mux_out[5]" at bus32to1.vhd(18)
+Info (10041): Inferred latch for "bus_mux_out[6]" at bus32to1.vhd(18)
+Info (10041): Inferred latch for "bus_mux_out[7]" at bus32to1.vhd(18)
+Info (10041): Inferred latch for "bus_mux_out[8]" at bus32to1.vhd(18)
+Info (10041): Inferred latch for "bus_mux_out[9]" at bus32to1.vhd(18)
+Info (10041): Inferred latch for "bus_mux_out[10]" at bus32to1.vhd(18)
+Info (10041): Inferred latch for "bus_mux_out[11]" at bus32to1.vhd(18)
+Info (10041): Inferred latch for "bus_mux_out[12]" at bus32to1.vhd(18)
+Info (10041): Inferred latch for "bus_mux_out[13]" at bus32to1.vhd(18)
+Info (10041): Inferred latch for "bus_mux_out[14]" at bus32to1.vhd(18)
+Info (10041): Inferred latch for "bus_mux_out[15]" at bus32to1.vhd(18)
+Info (10041): Inferred latch for "bus_mux_out[16]" at bus32to1.vhd(18)
+Info (10041): Inferred latch for "bus_mux_out[17]" at bus32to1.vhd(18)
+Info (10041): Inferred latch for "bus_mux_out[18]" at bus32to1.vhd(18)
+Info (10041): Inferred latch for "bus_mux_out[19]" at bus32to1.vhd(18)
+Info (10041): Inferred latch for "bus_mux_out[20]" at bus32to1.vhd(18)
+Info (10041): Inferred latch for "bus_mux_out[21]" at bus32to1.vhd(18)
+Info (10041): Inferred latch for "bus_mux_out[22]" at bus32to1.vhd(18)
+Info (10041): Inferred latch for "bus_mux_out[23]" at bus32to1.vhd(18)
+Info (10041): Inferred latch for "bus_mux_out[24]" at bus32to1.vhd(18)
+Info (10041): Inferred latch for "bus_mux_out[25]" at bus32to1.vhd(18)
+Info (10041): Inferred latch for "bus_mux_out[26]" at bus32to1.vhd(18)
+Info (10041): Inferred latch for "bus_mux_out[27]" at bus32to1.vhd(18)
+Info (10041): Inferred latch for "bus_mux_out[28]" at bus32to1.vhd(18)
+Info (10041): Inferred latch for "bus_mux_out[29]" at bus32to1.vhd(18)
+Info (10041): Inferred latch for "bus_mux_out[30]" at bus32to1.vhd(18)
+Info (10041): Inferred latch for "bus_mux_out[31]" at bus32to1.vhd(18)
 Info (12128): Elaborating entity "MDR" for hierarchy "MDR:MDRunit"
 Warning (10492): VHDL Process Statement warning at MDR.vhd(41): signal "memory_data_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "reg32" for hierarchy "MDR:MDRunit|reg32:MDRregister"
+Info (12128): Elaborating entity "selEncode" for hierarchy "selEncode:selectAndEnocde"
+Info (12128): Elaborating entity "RAM" for hierarchy "RAM:RAMunit"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "RAM:RAMunit|altsyncram:altsyncram_component"
+Info (12130): Elaborated megafunction instantiation "RAM:RAMunit|altsyncram:altsyncram_component"
+Info (12133): Instantiated megafunction "RAM:RAMunit|altsyncram:altsyncram_component" with the following parameter:
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "initRAM.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone III"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "512"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "widthad_a" = "9"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_d8i1.tdf
+    Info (12023): Found entity 1: altsyncram_d8i1
+Info (12128): Elaborating entity "altsyncram_d8i1" for hierarchy "RAM:RAMunit|altsyncram:altsyncram_component|altsyncram_d8i1:auto_generated"
+Info (12128): Elaborating entity "conFF" for hierarchy "conFF:CONFFunit"
+Warning (10631): VHDL Process Statement warning at CONFF.vhd(20): inferring latch(es) for signal or variable "CONFFoutput", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "CONFFoutput" at CONFF.vhd(20)
+Info (12128): Elaborating entity "reg0" for hierarchy "reg0:register0"
+Info (12128): Elaborating entity "preloadVal" for hierarchy "preloadVal:R1preload"
+Info (12128): Elaborating entity "MARreg" for hierarchy "MARreg:MARregister"
+Warning (14026): LATCH primitive "bus32to1:busUnit|bus_mux_out[0]" is permanently enabled
+Warning (14026): LATCH primitive "bus32to1:busUnit|bus_mux_out[1]" is permanently enabled
+Warning (14026): LATCH primitive "bus32to1:busUnit|bus_mux_out[2]" is permanently enabled
+Warning (14026): LATCH primitive "bus32to1:busUnit|bus_mux_out[3]" is permanently enabled
+Warning (14026): LATCH primitive "bus32to1:busUnit|bus_mux_out[4]" is permanently enabled
+Warning (14026): LATCH primitive "bus32to1:busUnit|bus_mux_out[5]" is permanently enabled
+Warning (14026): LATCH primitive "bus32to1:busUnit|bus_mux_out[6]" is permanently enabled
+Warning (14026): LATCH primitive "bus32to1:busUnit|bus_mux_out[7]" is permanently enabled
+Warning (14026): LATCH primitive "bus32to1:busUnit|bus_mux_out[8]" is permanently enabled
+Warning (14026): LATCH primitive "bus32to1:busUnit|bus_mux_out[9]" is permanently enabled
+Warning (14026): LATCH primitive "bus32to1:busUnit|bus_mux_out[10]" is permanently enabled
+Warning (14026): LATCH primitive "bus32to1:busUnit|bus_mux_out[11]" is permanently enabled
+Warning (14026): LATCH primitive "bus32to1:busUnit|bus_mux_out[12]" is permanently enabled
+Warning (14026): LATCH primitive "bus32to1:busUnit|bus_mux_out[13]" is permanently enabled
+Warning (14026): LATCH primitive "bus32to1:busUnit|bus_mux_out[14]" is permanently enabled
+Warning (14026): LATCH primitive "bus32to1:busUnit|bus_mux_out[15]" is permanently enabled
+Warning (14026): LATCH primitive "bus32to1:busUnit|bus_mux_out[16]" is permanently enabled
+Warning (14026): LATCH primitive "bus32to1:busUnit|bus_mux_out[17]" is permanently enabled
+Warning (14026): LATCH primitive "bus32to1:busUnit|bus_mux_out[18]" is permanently enabled
+Warning (14026): LATCH primitive "bus32to1:busUnit|bus_mux_out[19]" is permanently enabled
+Warning (14026): LATCH primitive "bus32to1:busUnit|bus_mux_out[20]" is permanently enabled
+Warning (14026): LATCH primitive "bus32to1:busUnit|bus_mux_out[21]" is permanently enabled
+Warning (14026): LATCH primitive "bus32to1:busUnit|bus_mux_out[22]" is permanently enabled
+Warning (14026): LATCH primitive "bus32to1:busUnit|bus_mux_out[23]" is permanently enabled
+Warning (14026): LATCH primitive "bus32to1:busUnit|bus_mux_out[24]" is permanently enabled
+Warning (14026): LATCH primitive "bus32to1:busUnit|bus_mux_out[25]" is permanently enabled
+Warning (14026): LATCH primitive "bus32to1:busUnit|bus_mux_out[26]" is permanently enabled
+Warning (14026): LATCH primitive "bus32to1:busUnit|bus_mux_out[27]" is permanently enabled
+Warning (14026): LATCH primitive "bus32to1:busUnit|bus_mux_out[28]" is permanently enabled
+Warning (14026): LATCH primitive "bus32to1:busUnit|bus_mux_out[29]" is permanently enabled
+Warning (14026): LATCH primitive "bus32to1:busUnit|bus_mux_out[30]" is permanently enabled
+Warning (14026): LATCH primitive "bus32to1:busUnit|bus_mux_out[31]" is permanently enabled
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 4 input pin(s) that do not drive logic
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "Cin"
-    Warning (15610): No output dependent on input pin "INPORTin"
-    Warning (15610): No output dependent on input pin "IRin"
-    Warning (15610): No output dependent on input pin "MARin"
-Info (21057): Implemented 8459 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 99 input pins
-    Info (21059): Implemented 736 output pins
-    Info (21061): Implemented 7624 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 35 warnings
-    Info: Peak virtual memory: 4680 megabytes
-    Info: Processing ended: Mon Mar 06 23:25:32 2023
-    Info: Elapsed time: 00:01:06
-    Info: Total CPU time (on all processors): 00:01:05
+Info (21057): Implemented 8892 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 120 input pins
+    Info (21059): Implemented 906 output pins
+    Info (21061): Implemented 7834 logic cells
+    Info (21064): Implemented 32 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 80 warnings
+    Info: Peak virtual memory: 4700 megabytes
+    Info: Processing ended: Sun Mar 26 15:04:35 2023
+    Info: Elapsed time: 00:00:55
+    Info: Total CPU time (on all processors): 00:00:55
 
 

@@ -5,29 +5,35 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vcom -93 -work work {C:/altera/13.0sp1/elec374/ALU/reg32.vhd}
-vcom -93 -work work {C:/altera/13.0sp1/elec374/ALU/encoder32to5.vhd}
-vcom -93 -work work {C:/altera/13.0sp1/elec374/ALU/bus32to1.vhd}
-vcom -93 -work work {C:/altera/13.0sp1/elec374/ALU/MDR.vhd}
-vcom -93 -work work {C:/altera/13.0sp1/elec374/ALU/datapath.vhd}
-vcom -93 -work work {C:/altera/13.0sp1/elec374/ALU/AND32.vhd}
-vcom -93 -work work {C:/altera/13.0sp1/elec374/ALU/OR32.vhd}
-vcom -93 -work work {C:/altera/13.0sp1/elec374/ALU/NEG32.vhd}
-vcom -93 -work work {C:/altera/13.0sp1/elec374/ALU/NOT32.vhd}
-vcom -93 -work work {C:/altera/13.0sp1/elec374/ALU/SHL32.vhd}
-vcom -93 -work work {C:/altera/13.0sp1/elec374/ALU/SHR32.vhd}
-vcom -93 -work work {C:/altera/13.0sp1/elec374/ALU/SHRA32.vhd}
-vcom -93 -work work {C:/altera/13.0sp1/elec374/ALU/ROL32.vhd}
-vcom -93 -work work {C:/altera/13.0sp1/elec374/ALU/ROR32.vhd}
-vcom -93 -work work {C:/altera/13.0sp1/elec374/ALU/ADD32.vhd}
-vcom -93 -work work {C:/altera/13.0sp1/elec374/ALU/SUB32.vhd}
-vcom -93 -work work {C:/altera/13.0sp1/elec374/ALU/DIV32.vhd}
-vcom -93 -work work {C:/altera/13.0sp1/elec374/ALU/MUL32.vhd}
-vcom -93 -work work {C:/altera/13.0sp1/elec374/ALU/ALU.vhd}
+vcom -93 -work work {C:/altera/13.0sp1/newlab/reg32.vhd}
+vcom -93 -work work {C:/altera/13.0sp1/newlab/encoder32to5.vhd}
+vcom -93 -work work {C:/altera/13.0sp1/newlab/bus32to1.vhd}
+vcom -93 -work work {C:/altera/13.0sp1/newlab/MDR.vhd}
+vcom -93 -work work {C:/altera/13.0sp1/newlab/datapath.vhd}
+vcom -93 -work work {C:/altera/13.0sp1/newlab/AND32.vhd}
+vcom -93 -work work {C:/altera/13.0sp1/newlab/OR32.vhd}
+vcom -93 -work work {C:/altera/13.0sp1/newlab/NEG32.vhd}
+vcom -93 -work work {C:/altera/13.0sp1/newlab/NOT32.vhd}
+vcom -93 -work work {C:/altera/13.0sp1/newlab/SHL32.vhd}
+vcom -93 -work work {C:/altera/13.0sp1/newlab/SHR32.vhd}
+vcom -93 -work work {C:/altera/13.0sp1/newlab/SHRA32.vhd}
+vcom -93 -work work {C:/altera/13.0sp1/newlab/ROL32.vhd}
+vcom -93 -work work {C:/altera/13.0sp1/newlab/ROR32.vhd}
+vcom -93 -work work {C:/altera/13.0sp1/newlab/ADD32.vhd}
+vcom -93 -work work {C:/altera/13.0sp1/newlab/SUB32.vhd}
+vcom -93 -work work {C:/altera/13.0sp1/newlab/DIV32.vhd}
+vcom -93 -work work {C:/altera/13.0sp1/newlab/MUL32.vhd}
+vcom -93 -work work {C:/altera/13.0sp1/newlab/ALU.vhd}
+vcom -93 -work work {C:/altera/13.0sp1/newlab/selandEncode.vhd}
+vcom -93 -work work {C:/altera/13.0sp1/newlab/RAM.vhd}
+vcom -93 -work work {C:/altera/13.0sp1/newlab/reg0.vhd}
+vcom -93 -work work {C:/altera/13.0sp1/newlab/CONFF.vhd}
+vcom -93 -work work {C:/altera/13.0sp1/newlab/MARreg.vhd}
+vcom -93 -work work {C:/altera/13.0sp1/newlab/preloadVal.vhd}
 
-vcom -93 -work work {C:/altera/13.0sp1/elec374/ALU/tb3_12.vhd}
+vcom -93 -work work {C:/altera/13.0sp1/newlab/brmi_tb.vhd}
 
-vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs="+acc"  tb3_12
+vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs="+acc"  brmi_tb
 
 add wave *
 view structure

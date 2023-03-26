@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Mon Mar 06 23:25:32 2023
+Analysis & Synthesis Status : Successful - Sun Mar 26 15:04:35 2023
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : ALU
 Top-level Entity Name : datapath
 Family : Cyclone III
-Total logic elements : 7,592
-    Total combinational functions : 6,984
-    Dedicated logic registers : 736
-Total registers : 736
-Total pins : 835
+Total logic elements : 7,802
+    Total combinational functions : 7,089
+    Dedicated logic registers : 841
+Total registers : 841
+Total pins : 1,026
 Total virtual pins : 0
-Total memory bits : 0
+Total memory bits : 16,384
 Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0

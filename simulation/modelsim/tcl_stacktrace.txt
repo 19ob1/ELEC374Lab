@@ -1,0 +1,33 @@
+Fri Mar 24 9:07:25 PM Eastern Daylight Time 2023
+Trace back: can't read "itk_component(nlv)": no such element in array
+    while executing
+"$itk_component(nlv) attribute -exist $item -attr $attr_name"
+    (method "::vsimwidgets::Dataflow::Base::hasNlvAttr" body line 3)
+    invoked from within
+"hasNlvAttr $item $attr_name"
+    (method "::vsimwidgets::Dataflow::Base::deleteNlvAttr" body line 4)
+    invoked from within
+"deleteNlvAttr $item fullvalue"
+    (method "::vsimwidgets::Dataflow::UpValue" body line 246)
+    invoked from within
+"UpValue --view"
+    (method "::vsimwidgets::Dataflow::center_objects" body line 31)
+    invoked from within
+".main_pane.dataflow.interior.cs.body.pw.df.c center_objects {{net /ld_tb/Yval}}"
+    ("after" script)
+  <2: ::tkerror {can't read "itk_component(nlv)": no such element in array}
+  <1: ::bgerror {can't read "itk_component(nlv)": no such element in array}
+Sat Mar 25 12:41:15 PM Eastern Daylight Time 2023
+Trace back: invalid command name ".main_pane.dataflow.interior.cs.body.pw.wf.top.tree.tree2"
+    while executing
+".main_pane.dataflow.interior.cs.body.pw.wf.top.tree.tree2 update"
+    ("after" script)
+  <2: ::tkerror {invalid command name ".main_pane.dataflow.interior.cs.body.pw.wf.top.tree.tree2"}
+  <1: ::bgerror {invalid command name ".main_pane.dataflow.interior.cs.body.pw.wf.top.tree.tree2"}
+Sat Mar 25 12:41:17 PM Eastern Daylight Time 2023
+Trace back: invalid command name ".main_pane.dataflow.interior.cs.body.pw.wf.top.grid.cursor,wave.data"
+    while executing
+".main_pane.dataflow.interior.cs.body.pw.wf.top.grid.cursor,wave.data zoomrange {0 ps} {525 ns}"
+    ("after" script)
+  <2: ::tkerror {invalid command name ".main_pane.dataflow.interior.cs.body.pw.wf.top.grid.cursor,wave.data"}
+  <1: ::bgerror {invalid command name ".main_pane.dataflow.interior.cs.body.pw.wf.top.grid.cursor,wave.data"}

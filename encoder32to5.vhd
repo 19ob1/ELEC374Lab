@@ -4,7 +4,8 @@ use IEEE.std_logic_1164.all;
 
 entity encoder32to5 is port(
       in0, in1, in2, in3, in4 , in5, in6 , in7 , in8 , in9, in10, in11, in12, 
-		in13, in14, in15, inHi,inLo, inZhigh, inZlow, inPc, inMdr, inport, inC: in std_logic;
+		in13, in14, in15, inHi,inLo, inZhigh, inZlow, inPc, inMdr, inport, inC, in24, in25, in26, in27, in28, in29, 
+		in30, in31 : in std_logic;
 		
 		output: out std_logic_vector(4 downto 0)
 );
@@ -13,9 +14,7 @@ end entity;
 
 architecture behaviour of encoder32to5 is 
 begin
-
-output <= 
-						"00000" when in0 = '1' else 
+output <=         "00000" when in0 = '1' else 
 						"00001" when in1 = '1' else
 						"00010" when in2 = '1' else
 						"00011" when in3 = '1' else
@@ -39,7 +38,14 @@ output <=
 						"10101" when inMdr = '1' else
 						"10110" when inport = '1' else
 						"10111" when inC = '1' else
-						"11000"; 
+						"11000" when in24 = '1' else
+						"11001" when in25 = '1' else
+						"11010" when in26= '1' else
+						"11011" when in27 = '1' else
+						"11100" when in28 = '1' else
+						"11101" when in29 = '1' else
+						"11110" when in30 = '1' else
+						"11111" when in31 = '1'; 
 end architecture;
 
 
