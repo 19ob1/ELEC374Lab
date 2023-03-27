@@ -248,19 +248,20 @@ begin
 					present_state <= reset_state;
 				
 				when branch3 =>
+					present_state <= delay1;
+				when delay1 =>
+					present_state <= delay2;
+				when delay2 =>
 					present_state <= branch4;
 				when branch4 =>
+					present_state <= delay3;
+				when delay3 =>
 					present_state <= branch5;
 				when branch5 =>
 					present_state <= branch6;
 				when branch6 =>
-					present_state <= branch6b;
-				when branch6b =>
-					present_state <= branch7;
-				when branch7 =>
-					present_state <= branchResult;
-				when branchResult =>
 					present_state <= reset_state;
+
 				when others =>
 				
 			end case;
@@ -286,18 +287,16 @@ begin
 				IncPC <= '1', '0' after 25 ns;
 				Zin <= '1', '0' after 25 ns;
 			when fetch1 =>
-				ZLOout <= '1', '0' after 25 ns;
-				PCin <= '1', '0' after 25 ns;   
-				read_op<= '1', '0' after 25 ns; 
-				readRAM <= '1', '0' after 25 ns; 
-				MDRin <= '1', '0' after 25 ns; 
+				ZLOout <= '1', '0' after 75 ns;
+				PCin <= '1', '0' after 75 ns; 
+				read_op<= '1' after 41 ns, '0' after 75 ns;
+				readRAM <= '1', '0' after 75 ns;
+				MDRin <= '1' after 41 ns, '0' after 75 ns;
 				
 			when fetch2 =>
 				MDRout <= '1', '0' after 25 ns;   
 				IRin <= '1', '0' after 25 ns;
-				
-				
-				
+							
 			when load3 =>
 				Grb <= '1', '0' after 25 ns;
 				BAout <= '1', '0' after 25 ns;
@@ -333,7 +332,7 @@ begin
 			
 			when store3 =>
 				Grb <= '1', '0' after 25 ns;
-				BAout <= '1' after 2 ns, '0' after 25 ns;
+				BAout <= '1' , '0' after 25 ns;
 				Yin <= '1', '0' after 25 ns;
 			when store4 =>
 				Cout <= '1', '0' after 25 ns;
@@ -368,9 +367,9 @@ begin
 				Rin <= '0', '1' after 10 ns, '0' after 30 ns; 
 				
 			when andi3 =>
-				Grb <= '1', '0' after 25 ns;
-				Rout <= '1', '0' after 25 ns;
-				Yin <= '1', '0' after 25 ns;
+				Grb <= '0', '1' after 10 ns, '0' after 30 ns ;
+				Rout <= '1', '1' after 10 ns, '0' after 30 ns ;
+				Yin <= '1', '1' after 10 ns, '0' after 30 ns ;
 			when andi4 =>
 				Cout <= '1', '0' after 25 ns;
 				and_op <= '1', '0' after 25 ns;
@@ -404,21 +403,14 @@ begin
 				Cout <= '1', '0' after 25 ns;
 				add_op<= '1', '0' after 25 ns;
 				Zin <= '1', '0' after 25 ns;
-			when branch6b =>
-				ZLOout <= '1', '0' after 25 ns;
-				PCin <= conFF, '0' after 25 ns;
-			when branch7 =>
-				PCout <= '1', '0' after 25 ns;
-				IncPC <= '1', '0' after 25 ns;
-				Zin <= '1', '0' after 25 ns;
-			when branchResult =>
-				ZLOout <= '1', '0' after 25 ns;
-				PCin <= conFF, '0' after 25 ns;
-			
+			when branch6 =>
+				ZLOout_tb <= '1';   
+				if (conFF = '1') then PCin <= '1'; else PCin <= '0'; end if; 
+	
 			when jump3 =>
-				Gra <= '1', '0' after 25 ns;
-				Rout <= '1' after 2 ns, '0' after 25 ns;
-				PCin <= '1', '0' after 25 ns;
+				Gra_tb <= '1', '0' after 25 ns;
+				Rout_tb <= '1', '0' after 25 ns;
+				PCin_tb <= '1', '0' after 25 ns;
 			
 			when mfhi3 =>
 				Gra <= '1', '0' after 25 ns;
@@ -429,8 +421,6 @@ begin
 				Gra <= '1', '0' after 25 ns;
 				LOout <= '1', '0' after 25 ns;
 				Rin <= '1', '0' after 25 ns;
-				
-			
 			when others =>
 		end case;
 	end process;

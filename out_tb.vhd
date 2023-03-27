@@ -10,7 +10,7 @@ END ENTITY out_tb;
 
 
 --Architecture of the testbench with the signal names 
-ARCHITECTURE ld_tb_arch OF out_tb IS
+ARCHITECTURE arch OF out_tb IS
 signal  PCout_tb, LOout_tb, HIout_tb, INPORTout_tb, MDRout_tb, Cout_tb: std_logic;
 	SIGNAL HIin_tb, LOin_tb, ZLOout_tb, ZHIout_tb, Coutin_tb, INPORTin_tb, OUTPORTin_tb, MARin_tb, Zin_tb, PCin_tb, MDRin_tb, IRin_tb, Yin_tb : std_logic;
 	

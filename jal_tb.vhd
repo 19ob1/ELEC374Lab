@@ -11,7 +11,7 @@ END ENTITY jal_tb;
 
 --Architecture of the testbench with the signal names 
 ARCHITECTURE arch OF jal_tb IS
-signal  PCout_tb, LOout_tb, HIout_tb, INPORTout_tb, MDRout_tb, Cout_tb: std_logic;
+   signal  PCout_tb, LOout_tb, HIout_tb, INPORTout_tb, MDRout_tb, Cout_tb: std_logic;
 	SIGNAL HIin_tb, LOin_tb, ZLOout_tb, ZHIout_tb, Coutin_tb, INPORTin_tb, OUTPORTin_tb, MARin_tb, Zin_tb, PCin_tb, MDRin_tb, IRin_tb, Yin_tb : std_logic;
 	
 	SIGNAL IncPC_tb, read_op_tb, and_op_tb, or_op_tb, add_op_tb, sub_op_tb, mul_op_tb, div_op_tb, shra_op_tb, shr_op_tb, shl_op_tb, ror_op_tb, rol_op_tb, neg_op_tb, not_op_tb: std_logic;
@@ -284,19 +284,13 @@ WHEN Reg_load2a =>
 	WHEN T1=>
 		ZLOout_tb <= '1', '0' after 75 ns;
 		PCin_tb <= '1', '0' after 75 ns; 
-		readS_tb <= '1' after 41 ns, '0' after 75 ns;
+		read_op_tb <= '1' after 41 ns, '0' after 75 ns;
 		readRAM_tb <= '1', '0' after 75 ns;
 		MDRin_tb <= '1' after 41 ns, '0' after 75 ns;
-		
-		
-		--Mdatain_tb<= x"4A920000";   --opcode for â€œand R5, R2, R4â€
 	WHEN T2=>
 		MDRout_tb <= '1', '0' after 25 ns;   
 		IRin_tb <= '1', '0' after 25 ns;
 	WHEN T3=>
-		--MDRout_tb <= '0';   
-		--IRin_tb <= '0';
-	
 		Grb_tb <= '1', '0' after 25 ns;
 		Rin_tb <= '1', '0' after 25 ns;
 		PCout_tb <= '1', '0' after 25 ns;
@@ -304,26 +298,8 @@ WHEN Reg_load2a =>
 		Gra_tb <= '1', '0' after 25 ns;
 		Rout_tb <= '1', '0' after 25 ns;
 		PCin_tb <= '1', '0' after 25 ns;
-
-		--MARin_tb <= '1', '0' after 25 ns;
-		--readS_tb <= '0', '1' after 19 ns;
-		
-	-- WHEN T6 =>
-		
-			
-	--WHEN T6b =>
-		--readS_tb <= '1' after 41 ns, '0' after 75 ns;
-		--readRAM_tb <= '1', '0' after 75 ns;
-		--MDRin_tb <= '1' after 41 ns, '0' after 75 ns;
-		--Mdatain_tb<= x"4A920000";
-		
---	WHEN T7 =>
-		
-		--MDRout_tb <= '1' after 2 ns, '0' after 25 ns;
-		--Gra_tb <= '1', '0' after 25 ns;
-		--Rin_tb <= '1', '0' after 25 ns;
 	
 	WHEN OTHERS =>
 	END CASE;
 END PROCESS;
-END ARCHITECTURE ld_tb_arch;
+END ARCHITECTURE arch;

@@ -2,22 +2,22 @@ m255
 K3
 13
 cModel Technology
-Z0 dC:\altera\13.0sp1\newlab\simulation\modelsim
+Z0 dC:\Users\salvi\repos\ELEC374Lab\simulation\modelsim
 Eadd32
 Z1 w1677998451
 Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-Z4 dC:\altera\13.0sp1\newlab\simulation\modelsim
-Z5 8C:/altera/13.0sp1/newlab/ADD32.vhd
-Z6 FC:/altera/13.0sp1/newlab/ADD32.vhd
+Z4 dC:\Users\salvi\repos\ELEC374Lab\simulation\modelsim
+Z5 8C:/Users/salvi/repos/ELEC374Lab/ADD32.vhd
+Z6 FC:/Users/salvi/repos/ELEC374Lab/ADD32.vhd
 l0
 L4
 VNCzR^9CV=6Ldo2eeK_E0Q2
 Z7 OV;C;10.1d;51
 31
-Z8 !s108 1679866035.925000
-Z9 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/newlab/ADD32.vhd|
-Z10 !s107 C:/altera/13.0sp1/newlab/ADD32.vhd|
+Z8 !s108 1679893129.967000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/ADD32.vhd|
+Z10 !s107 C:/Users/salvi/repos/ELEC374Lab/ADD32.vhd|
 Z11 o-93 -work work -O0
 Z12 tExplicit 1
 !s100 MMgM8fnoAdZY[L1Sb4e6>1
@@ -46,16 +46,16 @@ Z16 DPx4 ieee 16 std_logic_signed 0 22 E>OLoMaBGQ?hbGgOoNXM^1
 R2
 R3
 R4
-Z17 8C:/altera/13.0sp1/newlab/ALU.vhd
-Z18 FC:/altera/13.0sp1/newlab/ALU.vhd
+Z17 8C:/Users/salvi/repos/ELEC374Lab/ALU.vhd
+Z18 FC:/Users/salvi/repos/ELEC374Lab/ALU.vhd
 l0
 L8
 VoEaYa6cg9Aj4PXNI69`H@1
 R7
 31
-Z19 !s108 1679866036.303000
-Z20 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/newlab/ALU.vhd|
-Z21 !s107 C:/altera/13.0sp1/newlab/ALU.vhd|
+Z19 !s108 1679893130.372000
+Z20 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/ALU.vhd|
+Z21 !s107 C:/Users/salvi/repos/ELEC374Lab/ALU.vhd|
 R11
 R12
 !s100 k9DPEa_WdY:@POII7l@SQ0
@@ -84,16 +84,16 @@ Z22 w1677290807
 R2
 R3
 R4
-Z23 8C:/altera/13.0sp1/newlab/AND32.vhd
-Z24 FC:/altera/13.0sp1/newlab/AND32.vhd
+Z23 8C:/Users/salvi/repos/ELEC374Lab/AND32.vhd
+Z24 FC:/Users/salvi/repos/ELEC374Lab/AND32.vhd
 l0
 L4
 Vc[F:Q^973_lO9BA^CHd`e2
 R7
 31
-Z25 !s108 1679866034.969000
-Z26 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/newlab/AND32.vhd|
-Z27 !s107 C:/altera/13.0sp1/newlab/AND32.vhd|
+Z25 !s108 1679893129.062000
+Z26 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/AND32.vhd|
+Z27 !s107 C:/Users/salvi/repos/ELEC374Lab/AND32.vhd|
 R11
 R12
 !s100 K][RLYZlf]8mUdMQI97Yo1
@@ -114,56 +114,21 @@ R11
 R12
 !s100 Ojm:cWC2UD8EKSca`d4Pz3
 !i10b 1
-Ebrmi_tb
-Z28 w1679866021
-R2
-R3
-R4
-Z29 8C:/altera/13.0sp1/newlab/brmi_tb.vhd
-Z30 FC:/altera/13.0sp1/newlab/brmi_tb.vhd
-l0
-L8
-V]UVAde[XWL]?=BXhG3fS@2
-!s100 7TWzGgaP[k^z]JH<MoP5B0
-R7
-31
-!i10b 1
-Z31 !s108 1679866036.921000
-Z32 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/newlab/brmi_tb.vhd|
-Z33 !s107 C:/altera/13.0sp1/newlab/brmi_tb.vhd|
-R11
-R12
-Aarch
-R2
-R3
-DEx4 work 7 brmi_tb 0 22 ]UVAde[XWL]?=BXhG3fS@2
-l73
-L13
-V:IC]DzBK[jFhNEfNMzNLn3
-!s100 VWO8V9o3=bbmoW<3A:8cP1
-R7
-31
-!i10b 1
-R31
-R32
-R33
-R11
-R12
 Ebus32to1
-Z34 w1679725047
+Z28 w1679725047
 R2
 R3
 R4
-Z35 8C:/altera/13.0sp1/newlab/bus32to1.vhd
-Z36 FC:/altera/13.0sp1/newlab/bus32to1.vhd
+Z29 8C:/Users/salvi/repos/ELEC374Lab/bus32to1.vhd
+Z30 FC:/Users/salvi/repos/ELEC374Lab/bus32to1.vhd
 l0
 L4
 VeYYeUV74E4jmG5:TPA^O32
 R7
 31
-Z37 !s108 1679866034.655000
-Z38 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/newlab/bus32to1.vhd|
-Z39 !s107 C:/altera/13.0sp1/newlab/bus32to1.vhd|
+Z31 !s108 1679893128.768000
+Z32 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/bus32to1.vhd|
+Z33 !s107 C:/Users/salvi/repos/ELEC374Lab/bus32to1.vhd|
 R11
 R12
 !s100 Dn;FHihQcFBVf@OVLkc4H2
@@ -177,64 +142,64 @@ L16
 VNKEPBi@@Rg^C^4jaCGA4_1
 R7
 31
-R37
-R38
-R39
+R31
+R32
+R33
 R11
 R12
 !s100 l]EXg0>1nj=N]2<V`4aH>2
 !i10b 1
 Econff
-Z40 w1679855390
+Z34 w1679877814
 R2
 R3
 R4
-Z41 8C:/altera/13.0sp1/newlab/CONFF.vhd
-Z42 FC:/altera/13.0sp1/newlab/CONFF.vhd
+Z35 8C:/Users/salvi/repos/ELEC374Lab/CONFF.vhd
+Z36 FC:/Users/salvi/repos/ELEC374Lab/CONFF.vhd
 l0
 L4
-VXPQ@nbAVSMALB6F9Z2Kdl0
+V6Hicc1E=M^BN`N>6HZ5`W0
 R7
 31
-Z43 !s108 1679866036.637000
-Z44 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/newlab/CONFF.vhd|
-Z45 !s107 C:/altera/13.0sp1/newlab/CONFF.vhd|
+Z37 !s108 1679893130.739000
+Z38 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/CONFF.vhd|
+Z39 !s107 C:/Users/salvi/repos/ELEC374Lab/CONFF.vhd|
 R11
 R12
-!s100 89^cZO`hARX?coDDCAIdZ3
+!s100 8NiX;SSdh>?KJN5dV>4XG0
 !i10b 1
 Abehaviour
 R2
 R3
-DEx4 work 5 conff 0 22 XPQ@nbAVSMALB6F9Z2Kdl0
+DEx4 work 5 conff 0 22 6Hicc1E=M^BN`N>6HZ5`W0
 l19
 L13
-V93;IgEfYXNC<I^E3gVXLR0
+VzO0UNGDc0<3;cZDic`>T:1
 R7
 31
-R43
-R44
-R45
+R37
+R38
+R39
 R11
 R12
-!s100 8=O7G5dF`d^RY>0A@1RdB0
+!s100 eXJZSXDX1[P;2^kcJD^hn0
 !i10b 1
 Edatapath
-Z46 w1679854610
+Z40 w1679854610
 R15
 R2
 R3
 R4
-Z47 8C:/altera/13.0sp1/newlab/datapath.vhd
-Z48 FC:/altera/13.0sp1/newlab/datapath.vhd
+Z41 8C:/Users/salvi/repos/ELEC374Lab/datapath.vhd
+Z42 FC:/Users/salvi/repos/ELEC374Lab/datapath.vhd
 l0
 L5
 ValjPKCE[@X_PBz;@TR8Ze3
 R7
 31
-Z49 !s108 1679866034.861000
-Z50 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/newlab/datapath.vhd|
-Z51 !s107 C:/altera/13.0sp1/newlab/datapath.vhd|
+Z43 !s108 1679893128.953000
+Z44 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/datapath.vhd|
+Z45 !s107 C:/Users/salvi/repos/ELEC374Lab/datapath.vhd|
 R11
 R12
 !s100 Y0LAHf6K`bbIGJ6je@8dQ0
@@ -249,31 +214,31 @@ L35
 V20a>>ZdK>zR_Q6=;eNG5f0
 R7
 31
-R49
-R50
-R51
+R43
+R44
+R45
 R11
 R12
 !s100 H=Y4]KK3W<[?W3d83<bVW1
 !i10b 1
 Ediv32
-Z52 w1678097459
+Z46 w1678097459
 R14
 R15
-Z53 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z47 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
 R2
 R3
 R4
-Z54 8C:/altera/13.0sp1/newlab/DIV32.vhd
-Z55 FC:/altera/13.0sp1/newlab/DIV32.vhd
+Z48 8C:/Users/salvi/repos/ELEC374Lab/DIV32.vhd
+Z49 FC:/Users/salvi/repos/ELEC374Lab/DIV32.vhd
 l0
 L6
 V@C0_K63G5XDm1Y`R3S05_3
 R7
 31
-Z56 !s108 1679866036.085000
-Z57 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/newlab/DIV32.vhd|
-Z58 !s107 C:/altera/13.0sp1/newlab/DIV32.vhd|
+Z50 !s108 1679893130.187000
+Z51 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/DIV32.vhd|
+Z52 !s107 C:/Users/salvi/repos/ELEC374Lab/DIV32.vhd|
 R11
 R12
 !s100 IXWnI]hT^RV2czYGgJejM2
@@ -281,7 +246,7 @@ R12
 Abehavioural
 R14
 R15
-R53
+R47
 R2
 R3
 DEx4 work 5 div32 0 22 @C0_K63G5XDm1Y`R3S05_3
@@ -290,28 +255,28 @@ L13
 Vl<<I5RI^VZdKh3__55i5i3
 R7
 31
-R56
-R57
-R58
+R50
+R51
+R52
 R11
 R12
 !s100 VX_im^jfG=<RJk[nK4KHK2
 !i10b 1
 Eencoder32to5
-Z59 w1679725013
+Z53 w1679725013
 R2
 R3
 R4
-Z60 8C:/altera/13.0sp1/newlab/encoder32to5.vhd
-Z61 FC:/altera/13.0sp1/newlab/encoder32to5.vhd
+Z54 8C:/Users/salvi/repos/ELEC374Lab/encoder32to5.vhd
+Z55 FC:/Users/salvi/repos/ELEC374Lab/encoder32to5.vhd
 l0
 L5
 VJXMolMWb?kZDSDng38[eo0
 R7
 31
-Z62 !s108 1679866034.574000
-Z63 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/newlab/encoder32to5.vhd|
-Z64 !s107 C:/altera/13.0sp1/newlab/encoder32to5.vhd|
+Z56 !s108 1679893128.685000
+Z57 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/encoder32to5.vhd|
+Z58 !s107 C:/Users/salvi/repos/ELEC374Lab/encoder32to5.vhd|
 R11
 R12
 !s100 SnIBfV`aVkbLHA7o6hmal3
@@ -325,28 +290,63 @@ L15
 VNmNNbLgH4ECK7?i;KB:>z2
 R7
 31
+R56
+R57
+R58
+R11
+R12
+!s100 X0hkGMAKekB19;]Vl;^7=1
+!i10b 1
+Eld_tb
+Z59 w1679893115
+R2
+R3
+R4
+Z60 8C:/Users/salvi/repos/ELEC374Lab/ld_tb.vhd
+Z61 FC:/Users/salvi/repos/ELEC374Lab/ld_tb.vhd
+l0
+L5
+VOR=l41zmHFV9D[nNThLS[1
+!s100 YOPb41EN73M:XoLFz^2<A1
+R7
+31
+!i10b 1
+Z62 !s108 1679893131.021000
+Z63 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/ld_tb.vhd|
+Z64 !s107 C:/Users/salvi/repos/ELEC374Lab/ld_tb.vhd|
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 5 ld_tb 0 22 OR=l41zmHFV9D[nNThLS[1
+l68
+L8
+VHH;j]j;UAgCV1ad?;I4hh3
+!s100 N4i>j;1IS`YdiW^>1X1ze2
+R7
+31
+!i10b 1
 R62
 R63
 R64
 R11
 R12
-!s100 X0hkGMAKekB19;]Vl;^7=1
-!i10b 1
 Emarreg
 Z65 w1679700071
 R2
 R3
 R4
-Z66 8C:/altera/13.0sp1/newlab/MARreg.vhd
-Z67 FC:/altera/13.0sp1/newlab/MARreg.vhd
+Z66 8C:/Users/salvi/repos/ELEC374Lab/MARreg.vhd
+Z67 FC:/Users/salvi/repos/ELEC374Lab/MARreg.vhd
 l0
 L5
 Vd4@e1X]JPKE3@YE70OjW01
 R7
 31
-Z68 !s108 1679866036.753000
-Z69 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/newlab/MARreg.vhd|
-Z70 !s107 C:/altera/13.0sp1/newlab/MARreg.vhd|
+Z68 !s108 1679893130.841000
+Z69 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/MARreg.vhd|
+Z70 !s107 C:/Users/salvi/repos/ELEC374Lab/MARreg.vhd|
 R11
 R12
 !s100 XR4cR8:IDmGcSRUZf8n^k2
@@ -372,16 +372,16 @@ Z71 w1678154653
 R2
 R3
 R4
-Z72 8C:/altera/13.0sp1/newlab/MDR.vhd
-Z73 FC:/altera/13.0sp1/newlab/MDR.vhd
+Z72 8C:/Users/salvi/repos/ELEC374Lab/MDR.vhd
+Z73 FC:/Users/salvi/repos/ELEC374Lab/MDR.vhd
 l0
 L5
 Vn<mGgDhSV9IJ;U:b6?gf;0
 R7
 31
-Z74 !s108 1679866034.743000
-Z75 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/newlab/MDR.vhd|
-Z76 !s107 C:/altera/13.0sp1/newlab/MDR.vhd|
+Z74 !s108 1679893128.849000
+Z75 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/MDR.vhd|
+Z76 !s107 C:/Users/salvi/repos/ELEC374Lab/MDR.vhd|
 R11
 R12
 !s100 J5@7Ol>5PCjD6TZe@Q74>1
@@ -406,20 +406,20 @@ Emul32
 Z77 w1678159801
 R14
 R15
-R53
+R47
 R2
 R3
 R4
-Z78 8C:/altera/13.0sp1/newlab/MUL32.vhd
-Z79 FC:/altera/13.0sp1/newlab/MUL32.vhd
+Z78 8C:/Users/salvi/repos/ELEC374Lab/MUL32.vhd
+Z79 FC:/Users/salvi/repos/ELEC374Lab/MUL32.vhd
 l0
 L7
 V65KTV8V?om7z7BfmnQk3c2
 R7
 31
-Z80 !s108 1679866036.188000
-Z81 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/newlab/MUL32.vhd|
-Z82 !s107 C:/altera/13.0sp1/newlab/MUL32.vhd|
+Z80 !s108 1679893130.282000
+Z81 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/MUL32.vhd|
+Z82 !s107 C:/Users/salvi/repos/ELEC374Lab/MUL32.vhd|
 R11
 R12
 !s100 GK]d8V^A4dLmeYO@g;?dC2
@@ -427,7 +427,7 @@ R12
 Abehavioral
 R14
 R15
-R53
+R47
 R2
 R3
 DEx4 work 5 mul32 0 22 65KTV8V?om7z7BfmnQk3c2
@@ -451,16 +451,16 @@ R15
 R2
 R3
 R4
-Z84 8C:/altera/13.0sp1/newlab/NEG32.vhd
-Z85 FC:/altera/13.0sp1/newlab/NEG32.vhd
+Z84 8C:/Users/salvi/repos/ELEC374Lab/NEG32.vhd
+Z85 FC:/Users/salvi/repos/ELEC374Lab/NEG32.vhd
 l0
 L8
 VPiVi8WUa0cRJOC:c]4aCm1
 R7
 31
-Z86 !s108 1679866035.139000
-Z87 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/newlab/NEG32.vhd|
-Z88 !s107 C:/altera/13.0sp1/newlab/NEG32.vhd|
+Z86 !s108 1679893129.280000
+Z87 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/NEG32.vhd|
+Z88 !s107 C:/Users/salvi/repos/ELEC374Lab/NEG32.vhd|
 R11
 R12
 !s100 hFDO2n^ZO4hbXkN<j7Wz42
@@ -489,16 +489,16 @@ Z89 w1677291251
 R2
 R3
 R4
-Z90 8C:/altera/13.0sp1/newlab/NOT32.vhd
-Z91 FC:/altera/13.0sp1/newlab/NOT32.vhd
+Z90 8C:/Users/salvi/repos/ELEC374Lab/NOT32.vhd
+Z91 FC:/Users/salvi/repos/ELEC374Lab/NOT32.vhd
 l0
 L4
 VKQiAZi_gmR2Vo_;gRL1AU1
 R7
 31
-Z92 !s108 1679866035.232000
-Z93 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/newlab/NOT32.vhd|
-Z94 !s107 C:/altera/13.0sp1/newlab/NOT32.vhd|
+Z92 !s108 1679893129.373000
+Z93 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/NOT32.vhd|
+Z94 !s107 C:/Users/salvi/repos/ELEC374Lab/NOT32.vhd|
 R11
 R12
 !s100 S3RPbNG8AWGdXScnW>Tic0
@@ -524,16 +524,16 @@ Z95 w1677290794
 R2
 R3
 R4
-Z96 8C:/altera/13.0sp1/newlab/OR32.vhd
-Z97 FC:/altera/13.0sp1/newlab/OR32.vhd
+Z96 8C:/Users/salvi/repos/ELEC374Lab/OR32.vhd
+Z97 FC:/Users/salvi/repos/ELEC374Lab/OR32.vhd
 l0
 L4
 V75ZmbAeDl0:f5GYi4IoPR0
 R7
 31
-Z98 !s108 1679866035.057000
-Z99 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/newlab/OR32.vhd|
-Z100 !s107 C:/altera/13.0sp1/newlab/OR32.vhd|
+Z98 !s108 1679893129.182000
+Z99 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/OR32.vhd|
+Z100 !s107 C:/Users/salvi/repos/ELEC374Lab/OR32.vhd|
 R11
 R12
 !s100 dZ0cMezh6XmX6aFZXIO_i1
@@ -559,16 +559,16 @@ Z101 w1679732436
 R2
 R3
 R4
-Z102 8C:/altera/13.0sp1/newlab/preloadVal.vhd
-Z103 FC:/altera/13.0sp1/newlab/preloadVal.vhd
+Z102 8C:/Users/salvi/repos/ELEC374Lab/preloadVal.vhd
+Z103 FC:/Users/salvi/repos/ELEC374Lab/preloadVal.vhd
 l0
 L4
 Vj67:H`:d2cTfmF9lKeWna1
 R7
 31
-Z104 !s108 1679866036.834000
-Z105 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/newlab/preloadVal.vhd|
-Z106 !s107 C:/altera/13.0sp1/newlab/preloadVal.vhd|
+Z104 !s108 1679893130.924000
+Z105 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/preloadVal.vhd|
+Z106 !s107 C:/Users/salvi/repos/ELEC374Lab/preloadVal.vhd|
 R11
 R12
 !s100 b^8_G<Qa@BzVCQ2WiK=iL2
@@ -594,16 +594,16 @@ Z107 w1679713605
 R2
 R3
 R4
-Z108 8C:/altera/13.0sp1/newlab/RAM.vhd
-Z109 FC:/altera/13.0sp1/newlab/RAM.vhd
+Z108 8C:/Users/salvi/repos/ELEC374Lab/RAM.vhd
+Z109 FC:/Users/salvi/repos/ELEC374Lab/RAM.vhd
 l0
 L42
 V8^dd4GK0`I;3gYTn3SQTI0
 R7
 31
-Z110 !s108 1679866036.465000
-Z111 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/newlab/RAM.vhd|
-Z112 !s107 C:/altera/13.0sp1/newlab/RAM.vhd|
+Z110 !s108 1679893130.532000
+Z111 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/RAM.vhd|
+Z112 !s107 C:/Users/salvi/repos/ELEC374Lab/RAM.vhd|
 R11
 R12
 !s100 2:EF9nkYm=`oR5<_KLL[o0
@@ -629,16 +629,16 @@ Z113 w1679698857
 R2
 R3
 R4
-Z114 8C:/altera/13.0sp1/newlab/reg0.vhd
-Z115 FC:/altera/13.0sp1/newlab/reg0.vhd
+Z114 8C:/Users/salvi/repos/ELEC374Lab/reg0.vhd
+Z115 FC:/Users/salvi/repos/ELEC374Lab/reg0.vhd
 l0
 L4
 VXoob][90Tn^kDf9DOZMFH2
 R7
 31
-Z116 !s108 1679866036.548000
-Z117 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/newlab/reg0.vhd|
-Z118 !s107 C:/altera/13.0sp1/newlab/reg0.vhd|
+Z116 !s108 1679893130.614000
+Z117 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/reg0.vhd|
+Z118 !s107 C:/Users/salvi/repos/ELEC374Lab/reg0.vhd|
 R11
 R12
 !s100 1Y]Fe1[Ea6SC<cEn[>bZ:1
@@ -664,16 +664,16 @@ Z119 w1678159811
 R2
 R3
 R4
-Z120 8C:/altera/13.0sp1/newlab/reg32.vhd
-Z121 FC:/altera/13.0sp1/newlab/reg32.vhd
+Z120 8C:/Users/salvi/repos/ELEC374Lab/reg32.vhd
+Z121 FC:/Users/salvi/repos/ELEC374Lab/reg32.vhd
 l0
 L4
 V58U6cbETPldkBmcdBg5eP0
 R7
 31
-Z122 !s108 1679866034.482000
-Z123 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/newlab/reg32.vhd|
-Z124 !s107 C:/altera/13.0sp1/newlab/reg32.vhd|
+Z122 !s108 1679893128.566000
+Z123 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/reg32.vhd|
+Z124 !s107 C:/Users/salvi/repos/ELEC374Lab/reg32.vhd|
 R11
 R12
 !s100 cY5Wg8EQ[iOzfSHG9dcY_1
@@ -698,20 +698,20 @@ Erol32
 Z125 w1678157292
 R14
 R15
-R53
+R47
 R2
 R3
 R4
-Z126 8C:/altera/13.0sp1/newlab/ROL32.vhd
-Z127 FC:/altera/13.0sp1/newlab/ROL32.vhd
+Z126 8C:/Users/salvi/repos/ELEC374Lab/ROL32.vhd
+Z127 FC:/Users/salvi/repos/ELEC374Lab/ROL32.vhd
 l0
 L6
 VCa@o@HfIQWUBiZmjPCzW[2
 R7
 31
-Z128 !s108 1679866035.709000
-Z129 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/newlab/ROL32.vhd|
-Z130 !s107 C:/altera/13.0sp1/newlab/ROL32.vhd|
+Z128 !s108 1679893129.722000
+Z129 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/ROL32.vhd|
+Z130 !s107 C:/Users/salvi/repos/ELEC374Lab/ROL32.vhd|
 R11
 R12
 !s100 >nQWjLl^GAkLV<eK_8:=g3
@@ -719,7 +719,7 @@ R12
 Abehavioural
 R14
 R15
-R53
+R47
 R2
 R3
 DEx4 work 5 rol32 0 22 Ca@o@HfIQWUBiZmjPCzW[2
@@ -739,20 +739,20 @@ Eror32
 Z131 w1678157313
 R14
 R15
-R53
+R47
 R2
 R3
 R4
-Z132 8C:/altera/13.0sp1/newlab/ROR32.vhd
-Z133 FC:/altera/13.0sp1/newlab/ROR32.vhd
+Z132 8C:/Users/salvi/repos/ELEC374Lab/ROR32.vhd
+Z133 FC:/Users/salvi/repos/ELEC374Lab/ROR32.vhd
 l0
 L6
 VW8IX<n>Y@kcV^OSNz`4zk3
 R7
 31
-Z134 !s108 1679866035.823000
-Z135 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/newlab/ROR32.vhd|
-Z136 !s107 C:/altera/13.0sp1/newlab/ROR32.vhd|
+Z134 !s108 1679893129.821000
+Z135 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/ROR32.vhd|
+Z136 !s107 C:/Users/salvi/repos/ELEC374Lab/ROR32.vhd|
 R11
 R12
 !s100 oh6Xc5jUKh1M3EzfSXAF13
@@ -760,7 +760,7 @@ R12
 Abehavioural
 R14
 R15
-R53
+R47
 R2
 R3
 DEx4 work 5 ror32 0 22 W8IX<n>Y@kcV^OSNz`4zk3
@@ -781,16 +781,16 @@ Z137 w1679856431
 R2
 R3
 R4
-Z138 8C:/altera/13.0sp1/newlab/selandEncode.vhd
-Z139 FC:/altera/13.0sp1/newlab/selandEncode.vhd
+Z138 8C:/Users/salvi/repos/ELEC374Lab/selandEncode.vhd
+Z139 FC:/Users/salvi/repos/ELEC374Lab/selandEncode.vhd
 l0
 L4
 V:?0oRBa>FcXfcGJ@2[23^1
 R7
 31
-Z140 !s108 1679866036.389000
-Z141 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/newlab/selandEncode.vhd|
-Z142 !s107 C:/altera/13.0sp1/newlab/selandEncode.vhd|
+Z140 !s108 1679893130.459000
+Z141 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/selandEncode.vhd|
+Z142 !s107 C:/Users/salvi/repos/ELEC374Lab/selandEncode.vhd|
 R11
 R12
 !s100 <ibfamJaQ9TI[P0RYiLzo1
@@ -814,29 +814,29 @@ R12
 Eshl32
 Z143 w1677860622
 R14
-R53
+R47
 R15
 R2
 R3
 R16
 R4
-Z144 8C:/altera/13.0sp1/newlab/SHL32.vhd
-Z145 FC:/altera/13.0sp1/newlab/SHL32.vhd
+Z144 8C:/Users/salvi/repos/ELEC374Lab/SHL32.vhd
+Z145 FC:/Users/salvi/repos/ELEC374Lab/SHL32.vhd
 l0
 L7
 Vm^UMLo>`eXjNV93miX9Ea1
 R7
 31
-Z146 !s108 1679866035.334000
-Z147 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/newlab/SHL32.vhd|
-Z148 !s107 C:/altera/13.0sp1/newlab/SHL32.vhd|
+Z146 !s108 1679893129.455000
+Z147 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/SHL32.vhd|
+Z148 !s107 C:/Users/salvi/repos/ELEC374Lab/SHL32.vhd|
 R11
 R12
 !s100 e0FEj@hRZaA2;RchTkoH70
 !i10b 1
 Abehavioural
 R14
-R53
+R47
 R15
 R2
 R3
@@ -857,29 +857,29 @@ R12
 Eshr32
 Z149 w1677860654
 R14
-R53
+R47
 R15
 R2
 R3
 R16
 R4
-Z150 8C:/altera/13.0sp1/newlab/SHR32.vhd
-Z151 FC:/altera/13.0sp1/newlab/SHR32.vhd
+Z150 8C:/Users/salvi/repos/ELEC374Lab/SHR32.vhd
+Z151 FC:/Users/salvi/repos/ELEC374Lab/SHR32.vhd
 l0
 L7
 V83dKaIzRURa2]bDVg:PT?2
 R7
 31
-Z152 !s108 1679866035.456000
-Z153 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/newlab/SHR32.vhd|
-Z154 !s107 C:/altera/13.0sp1/newlab/SHR32.vhd|
+Z152 !s108 1679893129.542000
+Z153 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/SHR32.vhd|
+Z154 !s107 C:/Users/salvi/repos/ELEC374Lab/SHR32.vhd|
 R11
 R12
 !s100 I:nzR6QL1z3biE`0bP;Ua0
 !i10b 1
 Abehavioural
 R14
-R53
+R47
 R15
 R2
 R3
@@ -903,16 +903,16 @@ R3
 R2
 R14
 R4
-Z156 8C:/altera/13.0sp1/newlab/SHRA32.vhd
-Z157 FC:/altera/13.0sp1/newlab/SHRA32.vhd
+Z156 8C:/Users/salvi/repos/ELEC374Lab/SHRA32.vhd
+Z157 FC:/Users/salvi/repos/ELEC374Lab/SHRA32.vhd
 l0
 L5
 V95c>VTa2Z8nEjdnJ8H0GA0
 R7
 31
-Z158 !s108 1679866035.585000
-Z159 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/newlab/SHRA32.vhd|
-Z160 !s107 C:/altera/13.0sp1/newlab/SHRA32.vhd|
+Z158 !s108 1679893129.633000
+Z159 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/SHRA32.vhd|
+Z160 !s107 C:/Users/salvi/repos/ELEC374Lab/SHRA32.vhd|
 R11
 R12
 !s100 O15G<i5J0=j>dmHCXX?Uj2
@@ -939,16 +939,16 @@ Z161 w1678155582
 R2
 R3
 R4
-Z162 8C:/altera/13.0sp1/newlab/SUB32.vhd
-Z163 FC:/altera/13.0sp1/newlab/SUB32.vhd
+Z162 8C:/Users/salvi/repos/ELEC374Lab/SUB32.vhd
+Z163 FC:/Users/salvi/repos/ELEC374Lab/SUB32.vhd
 l0
 L4
 V1T:TQK8[Do4V?[oAEEL;n0
 R7
 31
-Z164 !s108 1679866036.010000
-Z165 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/newlab/SUB32.vhd|
-Z166 !s107 C:/altera/13.0sp1/newlab/SUB32.vhd|
+Z164 !s108 1679893130.083000
+Z165 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/SUB32.vhd|
+Z166 !s107 C:/Users/salvi/repos/ELEC374Lab/SUB32.vhd|
 R11
 R12
 !s100 WFkZPZ]BUI6QS67hK>P_N1

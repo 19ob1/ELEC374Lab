@@ -238,7 +238,7 @@ BEGIN CASE Present_state IS        --assert the required signalsin each clock cy
 		readRAM_tb <= '0';
 		writeRAM_tb <= '0';
 		ConFFin_tb <= '0';
-		CONFFout_tb <= '0';
+		--CONFFout_tb <= '0';
 		R1sig_tb <= '0';	
 		Gra_tb <= '0'; 
 		Grb_tb <= '0'; 

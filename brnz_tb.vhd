@@ -238,7 +238,7 @@ BEGIN CASE Present_state IS        --assert the required signalsin each clock cy
 		readRAM_tb <= '0';
 		writeRAM_tb <= '0';
 		ConFFin_tb <= '0';
-		CONFFout_tb <= '0';
+		--CONFFout_tb <= '0';
 		R1sig_tb <= '0';	
 		Gra_tb <= '0'; 
 		Grb_tb <= '0'; 
@@ -257,7 +257,6 @@ WHEN Reg_load1a =>
  WHEN Reg_load1b => 
    MDRin_tb <= '1', '0' after 35 ns; 
 WHEN Reg_load2a => 
-   
 	MDRout_tb <= '1'; 
 	Yin_tb <= '1';
    PCin_tb <= '1'; -- initialize R2 with the value $12 
@@ -265,32 +264,25 @@ WHEN Reg_load2a =>
    MDRout_tb <= '0';
    PCin_tb <= '0';
    Yin_tb <= '0';
-	
-	
 	 preloadedValue_tb <=  x"00000001";
 	 out24_tb <= '1', '0' after 10 ns;
-
 	 WHEN Reg_load3a => 
 	 MDRin_tb <= '1', '0' after 35 ns; 
-	 
     WHEN Reg_load3b =>
      MDRout_tb <= '1', '0' after 10 ns; 
 	  R6msig_tb <= '1'; -- initialize R3 with the value $14 
-		
 	WHEN T0 => --see if you need to de-assert these signals
 		R6sig_tb <= '1';
 		PCout_tb <= '1', '0' after 25 ns;
 		MARin_tb <= '1' , '0' after 25 ns;
 		IncPC_tb <= '1' , '0' after 25 ns;
 		Zin_tb <= '1', '0' after 25 ns;
-		
 	WHEN T1=>
 		ZLOout_tb <= '1', '0' after 75 ns;
 		PCin_tb <= '1', '0' after 75 ns; 
 		read_op_tb <= '1' after 41 ns, '0' after 75 ns;
 		readRAM_tb <= '1', '0' after 75 ns;
 		MDRin_tb <= '1' after 41 ns, '0' after 75 ns;
-			
 	WHEN T2=>
 		MDRout_tb <= '1', '0' after 25 ns;   
 		IRin_tb <= '1', '0' after 25 ns;

@@ -1,5 +1,4 @@
 
---and datapath_tb.vhd file: <This is the filename>
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
@@ -12,7 +11,7 @@ END ENTITY brzr_tb;
 --Architecture of the testbench with the signal names 
 ARCHITECTURE arch OF brzr_tb IS
 --Add any other signalsto see in your simulation
-	signal  PCout_tb, LOout_tb, HIout_tb, INPORTout_tb, MDRout_tb, Cout_tb: std_logic;
+signal  PCout_tb, LOout_tb, HIout_tb, INPORTout_tb, MDRout_tb, Cout_tb: std_logic;
 	SIGNAL HIin_tb, LOin_tb, ZLOout_tb, ZHIout_tb, Coutin_tb, INPORTin_tb, OUTPORTin_tb, MARin_tb, Zin_tb, PCin_tb, MDRin_tb, IRin_tb, Yin_tb : std_logic;
 	
 	SIGNAL IncPC_tb, read_op_tb, and_op_tb, or_op_tb, add_op_tb, sub_op_tb, mul_op_tb, div_op_tb, shra_op_tb, shr_op_tb, shl_op_tb, ror_op_tb, rol_op_tb, neg_op_tb, not_op_tb: std_logic;
@@ -123,7 +122,7 @@ PORT MAP (
 	
 	writeRAM => writeRAM_tb,
 	readRAM => readRAM_tb,
-	CONFFoutput => ConfFout_tb, 
+	CONFFoutput => ConFFout_tb, 
 	CONFFinput => CONFFin_tb,
 	R1sig => R1sig_tb,
 	R4sig => R4sig_tb,
@@ -170,7 +169,6 @@ PORT MAP (
 	clear => reset_tb
 
 	);
-
 	--add test logic here
 	Clock_process: PROCESS IS 
 	BEGIN
@@ -215,8 +213,7 @@ Present_state <= Reg_load2a;
 		
 BEGIN CASE Present_state IS        --assert the required signalsin each clock cycle
 	WHEN Default=>	
-		
-	PCout_tb  <= '0';
+		PCout_tb  <= '0';
 		LOout_tb  <= '0'; 
 		HIout_tb  <= '0'; 
 		INPORTout_tb  <= '0'; 
@@ -239,7 +236,8 @@ BEGIN CASE Present_state IS        --assert the required signalsin each clock cy
 		readRAM_tb <= '0';
 		writeRAM_tb <= '0';
 		ConFFin_tb <= '0';
-		CONFFout_tb <= '0';
+		--CONFFout_tb <= '0';
+		R1sig_tb <= '0';	
 		Gra_tb <= '0'; 
 		Grb_tb <= '0'; 
 		Grc_tb <= '0'; 
@@ -257,7 +255,6 @@ WHEN Reg_load1a =>
  WHEN Reg_load1b => 
    MDRin_tb <= '1', '0' after 35 ns; 
 WHEN Reg_load2a => 
-   
 	MDRout_tb <= '1'; 
 	Yin_tb <= '1';
    PCin_tb <= '1'; -- initialize R2 with the value $12 
@@ -265,39 +262,32 @@ WHEN Reg_load2a =>
    MDRout_tb <= '0';
    PCin_tb <= '0';
    Yin_tb <= '0';
-	
-	
 	 preloadedValue_tb <=  x"00000000";
 	 out24_tb <= '1', '0' after 10 ns;
-
-	 WHEN Reg_load3a => 
-	 MDRin_tb <= '1', '0' after 35 ns; 
-	 
-    WHEN Reg_load3b =>
+ WHEN Reg_load3a => 
+ MDRin_tb <= '1', '0' after 35 ns; 
+ WHEN Reg_load3b =>
      MDRout_tb <= '1', '0' after 10 ns; 
 	  R6msig_tb <= '1'; -- initialize R3 with the value $14 
-		
-	WHEN T0 => --see if you need to de-assert these signals
+ WHEN T0 => 
 		R6sig_tb <= '1';
 		PCout_tb <= '1', '0' after 25 ns;
 		MARin_tb <= '1' , '0' after 25 ns;
 		IncPC_tb <= '1' , '0' after 25 ns;
 		Zin_tb <= '1', '0' after 25 ns;
-		
 	WHEN T1=>
 		ZLOout_tb <= '1', '0' after 75 ns;
 		PCin_tb <= '1', '0' after 75 ns; 
 		read_op_tb <= '1' after 41 ns, '0' after 75 ns;
 		readRAM_tb <= '1', '0' after 75 ns;
 		MDRin_tb <= '1' after 41 ns, '0' after 75 ns;
-			
 	WHEN T2=>
 		MDRout_tb <= '1', '0' after 25 ns;   
 		IRin_tb <= '1', '0' after 25 ns;
 	WHEN T3=>
 		Gra_tb <= '1'  , '0' after 65 ns;
 		Rout_tb <= '1' , '0' after 65 ns;
-		CONFFin_tb <= '1' after 5 ns,'0' after 65 ns;
+		ConFFin_tb <= '1' after 5 ns,'0' after 65 ns;
 	WHEN T4=>
 		Pcout_tb <= '1', '0' after 25 ns;
 		Yin_tb <= '1', '0' after 25 ns;
@@ -305,16 +295,9 @@ WHEN Reg_load2a =>
 		Cout_tb <= '1', '0' after 25 ns;
 		add_op_tb <= '1', '0' after 25 ns;
 		Zin_tb <= '1', '0' after 25 ns;
-		
 	WHEN T6 =>
 		ZLOout_tb <= '1';   
-		
-		if (CONFFout_tb = '1') then 
-			PCin_tb <= '1';
-		else 
-			PCin_tb <= '0';
-		end if; 
-			
+		if (conFFout_tb = '1') then PCin_tb <= '1'; else PCin_tb <= '0'; end if; 
 	WHEN OTHERS =>
 	END CASE;
 END PROCESS;

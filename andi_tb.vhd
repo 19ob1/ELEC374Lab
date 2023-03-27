@@ -10,7 +10,7 @@ END ENTITY andi_tb;
 
 
 --Architecture of the testbench with the signal names 
-ARCHITECTURE ld_tb_arch OF andi_tb IS
+ARCHITECTURE arch OF andi_tb IS
 signal  PCout_tb, LOout_tb, HIout_tb, INPORTout_tb, MDRout_tb, Cout_tb: std_logic;
 	SIGNAL HIin_tb, LOin_tb, ZLOout_tb, ZHIout_tb, Coutin_tb, INPORTin_tb, OUTPORTin_tb, MARin_tb, Zin_tb, PCin_tb, MDRin_tb, IRin_tb, Yin_tb : std_logic;
 	
@@ -311,24 +311,7 @@ WHEN Reg_load2a =>
 	WHEN T5 =>		
 		ZLOout_tb <= '1', '0' after 40 ns;   
 		Gra_tb <= '0', '1' after 10 ns, '0' after 30 ns; 
-		Rin_tb <= '0', '1' after 10 ns, '0' after 30 ns; 
-		--MARin_tb <= '1', '0' after 25 ns;
-		--readS_tb <= '0', '1' after 19 ns;
-		
-	-- WHEN T6 =>
-		
-			
-	--WHEN T6b =>
-		--readS_tb <= '1' after 41 ns, '0' after 75 ns;
-		--readRAM_tb <= '1', '0' after 75 ns;
-		--MDRin_tb <= '1' after 41 ns, '0' after 75 ns;
-		--Mdatain_tb<= x"4A920000";
-		
---	WHEN T7 =>
-		
-		--MDRout_tb <= '1' after 2 ns, '0' after 25 ns;
-		--Gra_tb <= '1', '0' after 25 ns;
-		--Rin_tb <= '1', '0' after 25 ns;
+		Rin_tb <= '0', '1' after 10 ns, '0' after 30 ns;
 	
 	WHEN OTHERS =>
 	END CASE;
