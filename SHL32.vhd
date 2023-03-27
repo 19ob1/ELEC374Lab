@@ -14,8 +14,13 @@ end entity SHL32;
 
 architecture behavioural of SHL32 is
 begin	
-	
-		output <= std_logic_vector(shift_left(unsigned(A), to_integer(unsigned(B))));
+
+process(A, B)
+variable BTemp : integer;
+begin
+BTemp := to_integer(unsigned(B));
+output<= std_logic_vector(shift_left(unsigned(A), BTemp));
+end process; 
 end architecture behavioural;
 
 

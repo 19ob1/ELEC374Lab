@@ -20,7 +20,6 @@ architecture behaviour of selEncode is
 	signal decoderIn : std_logic_vector(3 downto 0);
 	signal decoderOut : std_logic_vector(15 downto 0);
 	signal Csign : std_logic_vector(31 downto 0);
-	signal convgra, convgrb, convgrc: std_logic_vector(3 downto 0);
 	signal outResult: std_logic; 
 	begin
 	

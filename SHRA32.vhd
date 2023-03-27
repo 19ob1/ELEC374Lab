@@ -15,7 +15,9 @@ architecture behaviour of SHRA32 is
 begin
 
 process(A, B)
+variable BTemp : integer;
 begin
-output <= std_logic_vector(shift_right(signed(A), to_integer(unsigned(B))));
+BTemp := to_integer(unsigned(B));
+output <= std_logic_vector(shift_right(signed(A), BTemp));
 end process;
 end behaviour;

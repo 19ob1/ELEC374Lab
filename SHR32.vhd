@@ -14,7 +14,13 @@ end entity SHR32;
 
 architecture behavioural of SHR32 is
 begin	
-		output <= std_logic_vector(shift_right(unsigned(A), to_integer(unsigned(B))));
+
+process(A, B)
+variable BTemp : integer;
+begin
+BTemp := to_integer(unsigned(B));
+output <= std_logic_vector(shift_right(unsigned(A), BTemp));
+end process;
 end architecture behavioural;
 
 

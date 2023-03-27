@@ -10,6 +10,13 @@
 # ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
+# vcom -93 -work work {C:/Users/salvi/repos/ELEC374Lab/control_unit.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity control_unit
+# -- Compiling architecture behaviour of control_unit
 # vcom -93 -work work {C:/Users/salvi/repos/ELEC374Lab/reg32.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -150,7 +157,7 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Loading package NUMERIC_STD
 # -- Compiling entity DIV32
-# -- Compiling architecture behavioural of DIV32
+# -- Compiling architecture behaviour of DIV32
 # vcom -93 -work work {C:/Users/salvi/repos/ELEC374Lab/MUL32.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -206,28 +213,21 @@
 # -- Loading package std_logic_1164
 # -- Compiling entity MARreg
 # -- Compiling architecture behaviour of MARreg
-# vcom -93 -work work {C:/Users/salvi/repos/ELEC374Lab/preloadVal.vhd}
+# 
+# vcom -93 -work work {C:/Users/salvi/repos/ELEC374Lab/phase3_tb.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity preloadVal
-# -- Compiling architecture logic of preloadVal
+# -- Compiling entity phase3_tb
+# -- Compiling architecture arch of phase3_tb
 # 
-# vcom -93 -work work {C:/Users/salvi/repos/ELEC374Lab/ld_tb.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity ld_tb
-# -- Compiling architecture arch of ld_tb
-# 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs="+acc"  ld_tb
-# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps ld_tb 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs="+acc"  phase3_tb
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps phase3_tb 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.ld_tb(arch)
+# Loading work.phase3_tb(arch)
 # Loading ieee.std_logic_arith(body)
 # Loading work.datapath(behaviour)
 # Loading ieee.std_logic_signed(body)
@@ -246,7 +246,7 @@
 # Loading work.ror32(behavioural)
 # Loading work.rol32(behavioural)
 # Loading work.mul32(behavioral)
-# Loading work.div32(behavioural)
+# Loading work.div32(behaviour)
 # Loading work.encoder32to5(behaviour)
 # Loading work.bus32to1(behaviour)
 # Loading work.mdr(behaviour)
@@ -257,677 +257,925 @@
 # Loading altera_mf.altera_device_families(body)
 # Loading altera_mf.altsyncram(translated)
 # Loading work.conff(behaviour)
+# Loading work.control_unit(behaviour)
 # Loading work.reg0(behaviour)
-# Loading work.preloadval(logic)
 # Loading work.marreg(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /phase3_tb/main/CONTROLU/inportin has no driver.
+# 
+# This port will contribute value (U) to the signal network.
+# 
 # 
 # add wave *
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
-# run 500 ns
+# run 1000 ns
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/multiplication
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/shiftoleft
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/rotateleft
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/shifttoright
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/rotateright
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/shiftA
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/shiftoleft
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/shifttoright
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/shiftA
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/substraction/SUBNEG
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/substraction/SUBNEG
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/main/ALUunit/negation
+#    Time: 0 ps  Iteration: 0  Instance: /phase3_tb/main/ALUunit/negation
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/shiftA
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/shifttoright
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/shiftoleft
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/rotateright
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/rotateleft
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 5  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 5  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 5  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 5  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 5  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 5  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 5  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 5  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 5  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 5  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 5  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 5  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 5  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 5  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 5  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 5  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 5  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 5  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 5  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 5  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 5  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 5  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 5  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 5  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 5  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 5  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 5  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 5  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 5  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 5  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 5  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 5  Instance: /ld_tb/main/ALUunit/division
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /phase3_tb/main/ALUunit/multiplication
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -671088640 is not in bounds of NATURAL.
+#    Time: 575 ns  Iteration: 2  Instance: /phase3_tb/main/ALUunit/shiftA
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -671088640 is not in bounds of NATURAL.
+#    Time: 575 ns  Iteration: 2  Instance: /phase3_tb/main/ALUunit/shifttoright
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -671088640 is not in bounds of NATURAL.
+#    Time: 575 ns  Iteration: 2  Instance: /phase3_tb/main/ALUunit/shiftoleft

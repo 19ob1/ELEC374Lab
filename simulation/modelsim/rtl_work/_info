@@ -15,7 +15,7 @@ L4
 VNCzR^9CV=6Ldo2eeK_E0Q2
 Z7 OV;C;10.1d;51
 31
-Z8 !s108 1679893129.967000
+Z8 !s108 1679939617.856000
 Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/ADD32.vhd|
 Z10 !s107 C:/Users/salvi/repos/ELEC374Lab/ADD32.vhd|
 Z11 o-93 -work work -O0
@@ -53,7 +53,7 @@ L8
 VoEaYa6cg9Aj4PXNI69`H@1
 R7
 31
-Z19 !s108 1679893130.372000
+Z19 !s108 1679939618.401000
 Z20 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/ALU.vhd|
 Z21 !s107 C:/Users/salvi/repos/ELEC374Lab/ALU.vhd|
 R11
@@ -91,7 +91,7 @@ L4
 Vc[F:Q^973_lO9BA^CHd`e2
 R7
 31
-Z25 !s108 1679893129.062000
+Z25 !s108 1679939616.550000
 Z26 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/AND32.vhd|
 Z27 !s107 C:/Users/salvi/repos/ELEC374Lab/AND32.vhd|
 R11
@@ -126,7 +126,7 @@ L4
 VeYYeUV74E4jmG5:TPA^O32
 R7
 31
-Z31 !s108 1679893128.768000
+Z31 !s108 1679939616.167000
 Z32 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/bus32to1.vhd|
 Z33 !s107 C:/Users/salvi/repos/ELEC374Lab/bus32to1.vhd|
 R11
@@ -161,7 +161,7 @@ L4
 V6Hicc1E=M^BN`N>6HZ5`W0
 R7
 31
-Z37 !s108 1679893130.739000
+Z37 !s108 1679939619.008000
 Z38 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/CONFF.vhd|
 Z39 !s107 C:/Users/salvi/repos/ELEC374Lab/CONFF.vhd|
 R11
@@ -184,34 +184,32 @@ R11
 R12
 !s100 eXJZSXDX1[P;2^kcJD^hn0
 !i10b 1
-Edatapath
-Z40 w1679854610
-R15
+Econtrol_unit
+Z40 w1679939514
 R2
 R3
 R4
-Z41 8C:/Users/salvi/repos/ELEC374Lab/datapath.vhd
-Z42 FC:/Users/salvi/repos/ELEC374Lab/datapath.vhd
+Z41 8C:/Users/salvi/repos/ELEC374Lab/control_unit.vhd
+Z42 FC:/Users/salvi/repos/ELEC374Lab/control_unit.vhd
 l0
-L5
-ValjPKCE[@X_PBz;@TR8Ze3
+L4
+V7J?9[ZYk?aJ;1JUKMY9Yl0
 R7
 31
-Z43 !s108 1679893128.953000
-Z44 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/datapath.vhd|
-Z45 !s107 C:/Users/salvi/repos/ELEC374Lab/datapath.vhd|
+Z43 !s108 1679939615.725000
+Z44 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/control_unit.vhd|
+Z45 !s107 C:/Users/salvi/repos/ELEC374Lab/control_unit.vhd|
 R11
 R12
-!s100 Y0LAHf6K`bbIGJ6je@8dQ0
+!s100 nLQfC]h4R8XHS1NO@;a700
 !i10b 1
 Abehaviour
-R15
 R2
 R3
-DEx4 work 8 datapath 0 22 aljPKCE[@X_PBz;@TR8Ze3
-l183
-L35
-V20a>>ZdK>zR_Q6=;eNG5f0
+DEx4 work 12 control_unit 0 22 7J?9[ZYk?aJ;1JUKMY9Yl0
+l26
+L18
+ViT^i48VCg6Oig>5FPn0>00
 R7
 31
 R43
@@ -219,64 +217,101 @@ R44
 R45
 R11
 R12
-!s100 H=Y4]KK3W<[?W3d83<bVW1
+!s100 Fa]:65h]J0EU90[YDThD^0
 !i10b 1
-Ediv32
-Z46 w1678097459
-R14
+Edatapath
+Z46 w1679938337
 R15
-Z47 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
 R2
 R3
 R4
-Z48 8C:/Users/salvi/repos/ELEC374Lab/DIV32.vhd
-Z49 FC:/Users/salvi/repos/ELEC374Lab/DIV32.vhd
+Z47 8C:/Users/salvi/repos/ELEC374Lab/datapath.vhd
+Z48 FC:/Users/salvi/repos/ELEC374Lab/datapath.vhd
+l0
+L5
+VNLVcMgBEZjZ7cK`iGNcgh2
+R7
+31
+Z49 !s108 1679939616.421000
+Z50 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/datapath.vhd|
+Z51 !s107 C:/Users/salvi/repos/ELEC374Lab/datapath.vhd|
+R11
+R12
+!s100 Gbf<dCzSamo3=GgHldZlk2
+!i10b 1
+Abehaviour
+R15
+R2
+R3
+DEx4 work 8 datapath 0 22 NLVcMgBEZjZ7cK`iGNcgh2
+l194
+L24
+VMJ`mf=ZBRE:3RObHI^i<Z3
+R7
+31
+R49
+R50
+R51
+R11
+R12
+!s100 d8o2Y7jFFDh:3OGVKJ<Kz2
+!i10b 1
+Ediv32
+Z52 w1679935771
+R14
+R15
+Z53 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+R2
+R3
+R4
+Z54 8C:/Users/salvi/repos/ELEC374Lab/DIV32.vhd
+Z55 FC:/Users/salvi/repos/ELEC374Lab/DIV32.vhd
 l0
 L6
 V@C0_K63G5XDm1Y`R3S05_3
 R7
 31
-Z50 !s108 1679893130.187000
-Z51 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/DIV32.vhd|
-Z52 !s107 C:/Users/salvi/repos/ELEC374Lab/DIV32.vhd|
+Z56 !s108 1679939618.121000
+Z57 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/DIV32.vhd|
+Z58 !s107 C:/Users/salvi/repos/ELEC374Lab/DIV32.vhd|
 R11
 R12
 !s100 IXWnI]hT^RV2czYGgJejM2
 !i10b 1
-Abehavioural
+Abehaviour
 R14
 R15
-R47
+R53
 R2
 R3
 DEx4 work 5 div32 0 22 @C0_K63G5XDm1Y`R3S05_3
 l14
 L13
-Vl<<I5RI^VZdKh3__55i5i3
+Vkz_;=n[CZ>DeEd@Dd[Q1L1
 R7
 31
-R50
-R51
-R52
+R56
+R57
+R58
 R11
 R12
-!s100 VX_im^jfG=<RJk[nK4KHK2
+!s100 24GL<f?^kdWoRA2<[87>;3
 !i10b 1
 Eencoder32to5
-Z53 w1679725013
+Z59 w1679725013
 R2
 R3
 R4
-Z54 8C:/Users/salvi/repos/ELEC374Lab/encoder32to5.vhd
-Z55 FC:/Users/salvi/repos/ELEC374Lab/encoder32to5.vhd
+Z60 8C:/Users/salvi/repos/ELEC374Lab/encoder32to5.vhd
+Z61 FC:/Users/salvi/repos/ELEC374Lab/encoder32to5.vhd
 l0
 L5
 VJXMolMWb?kZDSDng38[eo0
 R7
 31
-Z56 !s108 1679893128.685000
-Z57 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/encoder32to5.vhd|
-Z58 !s107 C:/Users/salvi/repos/ELEC374Lab/encoder32to5.vhd|
+Z62 !s108 1679939616.005000
+Z63 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/encoder32to5.vhd|
+Z64 !s107 C:/Users/salvi/repos/ELEC374Lab/encoder32to5.vhd|
 R11
 R12
 !s100 SnIBfV`aVkbLHA7o6hmal3
@@ -290,48 +325,13 @@ L15
 VNmNNbLgH4ECK7?i;KB:>z2
 R7
 31
-R56
-R57
-R58
-R11
-R12
-!s100 X0hkGMAKekB19;]Vl;^7=1
-!i10b 1
-Eld_tb
-Z59 w1679893115
-R2
-R3
-R4
-Z60 8C:/Users/salvi/repos/ELEC374Lab/ld_tb.vhd
-Z61 FC:/Users/salvi/repos/ELEC374Lab/ld_tb.vhd
-l0
-L5
-VOR=l41zmHFV9D[nNThLS[1
-!s100 YOPb41EN73M:XoLFz^2<A1
-R7
-31
-!i10b 1
-Z62 !s108 1679893131.021000
-Z63 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/ld_tb.vhd|
-Z64 !s107 C:/Users/salvi/repos/ELEC374Lab/ld_tb.vhd|
-R11
-R12
-Aarch
-R2
-R3
-DEx4 work 5 ld_tb 0 22 OR=l41zmHFV9D[nNThLS[1
-l68
-L8
-VHH;j]j;UAgCV1ad?;I4hh3
-!s100 N4i>j;1IS`YdiW^>1X1ze2
-R7
-31
-!i10b 1
 R62
 R63
 R64
 R11
 R12
+!s100 X0hkGMAKekB19;]Vl;^7=1
+!i10b 1
 Emarreg
 Z65 w1679700071
 R2
@@ -344,7 +344,7 @@ L5
 Vd4@e1X]JPKE3@YE70OjW01
 R7
 31
-Z68 !s108 1679893130.841000
+Z68 !s108 1679939619.146000
 Z69 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/MARreg.vhd|
 Z70 !s107 C:/Users/salvi/repos/ELEC374Lab/MARreg.vhd|
 R11
@@ -379,7 +379,7 @@ L5
 Vn<mGgDhSV9IJ;U:b6?gf;0
 R7
 31
-Z74 !s108 1679893128.849000
+Z74 !s108 1679939616.293000
 Z75 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/MDR.vhd|
 Z76 !s107 C:/Users/salvi/repos/ELEC374Lab/MDR.vhd|
 R11
@@ -406,7 +406,7 @@ Emul32
 Z77 w1678159801
 R14
 R15
-R47
+R53
 R2
 R3
 R4
@@ -417,7 +417,7 @@ L7
 V65KTV8V?om7z7BfmnQk3c2
 R7
 31
-Z80 !s108 1679893130.282000
+Z80 !s108 1679939618.245000
 Z81 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/MUL32.vhd|
 Z82 !s107 C:/Users/salvi/repos/ELEC374Lab/MUL32.vhd|
 R11
@@ -427,7 +427,7 @@ R12
 Abehavioral
 R14
 R15
-R47
+R53
 R2
 R3
 DEx4 work 5 mul32 0 22 65KTV8V?om7z7BfmnQk3c2
@@ -458,7 +458,7 @@ L8
 VPiVi8WUa0cRJOC:c]4aCm1
 R7
 31
-Z86 !s108 1679893129.280000
+Z86 !s108 1679939616.805000
 Z87 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/NEG32.vhd|
 Z88 !s107 C:/Users/salvi/repos/ELEC374Lab/NEG32.vhd|
 R11
@@ -496,7 +496,7 @@ L4
 VKQiAZi_gmR2Vo_;gRL1AU1
 R7
 31
-Z92 !s108 1679893129.373000
+Z92 !s108 1679939616.959000
 Z93 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/NOT32.vhd|
 Z94 !s107 C:/Users/salvi/repos/ELEC374Lab/NOT32.vhd|
 R11
@@ -531,7 +531,7 @@ L4
 V75ZmbAeDl0:f5GYi4IoPR0
 R7
 31
-Z98 !s108 1679893129.182000
+Z98 !s108 1679939616.674000
 Z99 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/OR32.vhd|
 Z100 !s107 C:/Users/salvi/repos/ELEC374Lab/OR32.vhd|
 R11
@@ -554,41 +554,41 @@ R11
 R12
 !s100 ]jG842>5CNWANjHn9]e]b2
 !i10b 1
-Epreloadval
-Z101 w1679732436
+Ephase3_tb
+Z101 w1679938396
 R2
 R3
 R4
-Z102 8C:/Users/salvi/repos/ELEC374Lab/preloadVal.vhd
-Z103 FC:/Users/salvi/repos/ELEC374Lab/preloadVal.vhd
+Z102 8C:/Users/salvi/repos/ELEC374Lab/phase3_tb.vhd
+Z103 FC:/Users/salvi/repos/ELEC374Lab/phase3_tb.vhd
 l0
-L4
-Vj67:H`:d2cTfmF9lKeWna1
+L5
+VNPo1SgkI`YnjEKGh=QSho0
+!s100 TjK;7@`4>Ub<;AbaK>_1F1
 R7
 31
-Z104 !s108 1679893130.924000
-Z105 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/preloadVal.vhd|
-Z106 !s107 C:/Users/salvi/repos/ELEC374Lab/preloadVal.vhd|
+!i10b 1
+Z104 !s108 1679939619.274000
+Z105 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/phase3_tb.vhd|
+Z106 !s107 C:/Users/salvi/repos/ELEC374Lab/phase3_tb.vhd|
 R11
 R12
-!s100 b^8_G<Qa@BzVCQ2WiK=iL2
-!i10b 1
-Alogic
+Aarch
 R2
 R3
-DEx4 work 10 preloadval 0 22 j67:H`:d2cTfmF9lKeWna1
-l14
-L13
-V[dkFEBF@F]9I5H?QMdd@]3
+DEx4 work 9 phase3_tb 0 22 NPo1SgkI`YnjEKGh=QSho0
+l33
+L8
+VlgBKJ]kBi;28^B7nj?b7f0
+!s100 ;@UeMD8d`WaTb@kF?E3Yh0
 R7
 31
+!i10b 1
 R104
 R105
 R106
 R11
 R12
-!s100 8LiD[ZOWLWHYILL=lbCk_0
-!i10b 1
 Eram
 Z107 w1679713605
 R2
@@ -601,7 +601,7 @@ L42
 V8^dd4GK0`I;3gYTn3SQTI0
 R7
 31
-Z110 !s108 1679893130.532000
+Z110 !s108 1679939618.700000
 Z111 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/RAM.vhd|
 Z112 !s107 C:/Users/salvi/repos/ELEC374Lab/RAM.vhd|
 R11
@@ -636,7 +636,7 @@ L4
 VXoob][90Tn^kDf9DOZMFH2
 R7
 31
-Z116 !s108 1679893130.614000
+Z116 !s108 1679939618.845000
 Z117 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/reg0.vhd|
 Z118 !s107 C:/Users/salvi/repos/ELEC374Lab/reg0.vhd|
 R11
@@ -671,7 +671,7 @@ L4
 V58U6cbETPldkBmcdBg5eP0
 R7
 31
-Z122 !s108 1679893128.566000
+Z122 !s108 1679939615.873000
 Z123 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/reg32.vhd|
 Z124 !s107 C:/Users/salvi/repos/ELEC374Lab/reg32.vhd|
 R11
@@ -695,10 +695,10 @@ R12
 !s100 A<JB7VjhkAE[_NTAm<^oO3
 !i10b 1
 Erol32
-Z125 w1678157292
+Z125 w1679932614
 R14
 R15
-R47
+R53
 R2
 R3
 R4
@@ -709,7 +709,7 @@ L6
 VCa@o@HfIQWUBiZmjPCzW[2
 R7
 31
-Z128 !s108 1679893129.722000
+Z128 !s108 1679939617.562000
 Z129 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/ROL32.vhd|
 Z130 !s107 C:/Users/salvi/repos/ELEC374Lab/ROL32.vhd|
 R11
@@ -719,13 +719,13 @@ R12
 Abehavioural
 R14
 R15
-R47
+R53
 R2
 R3
 DEx4 work 5 rol32 0 22 Ca@o@HfIQWUBiZmjPCzW[2
 l13
 L12
-VO[3Un@Q]Uk617_JPXMF440
+VOYM1`<gIZ5@TAfHe:HJo]2
 R7
 31
 R128
@@ -733,13 +733,13 @@ R129
 R130
 R11
 R12
-!s100 YH@gYld47<iIBK>5kkWE10
+!s100 U4L0X`aF7E^l;VTn@jcm[0
 !i10b 1
 Eror32
-Z131 w1678157313
+Z131 w1679932602
 R14
 R15
-R47
+R53
 R2
 R3
 R4
@@ -750,7 +750,7 @@ L6
 VW8IX<n>Y@kcV^OSNz`4zk3
 R7
 31
-Z134 !s108 1679893129.821000
+Z134 !s108 1679939617.696000
 Z135 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/ROR32.vhd|
 Z136 !s107 C:/Users/salvi/repos/ELEC374Lab/ROR32.vhd|
 R11
@@ -760,13 +760,13 @@ R12
 Abehavioural
 R14
 R15
-R47
+R53
 R2
 R3
 DEx4 work 5 ror32 0 22 W8IX<n>Y@kcV^OSNz`4zk3
 l13
 L12
-VhTRo:I=oYDQli<PO>okMP2
+VX_[7CG?Thg:5zOdgRCFVQ1
 R7
 31
 R134
@@ -774,10 +774,10 @@ R135
 R136
 R11
 R12
-!s100 ci0O;k3lD5=:lWLHHl6753
+!s100 DzoBl^m?`bP@kUMOa8>1n2
 !i10b 1
 Eselencode
-Z137 w1679856431
+Z137 w1679919322
 R2
 R3
 R4
@@ -788,7 +788,7 @@ L4
 V:?0oRBa>FcXfcGJ@2[23^1
 R7
 31
-Z140 !s108 1679893130.459000
+Z140 !s108 1679939618.567000
 Z141 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/selandEncode.vhd|
 Z142 !s107 C:/Users/salvi/repos/ELEC374Lab/selandEncode.vhd|
 R11
@@ -799,9 +799,9 @@ Abehaviour
 R2
 R3
 DEx4 work 9 selencode 0 22 :?0oRBa>FcXfcGJ@2[23^1
-l25
+l24
 L17
-VDM@n8kYKC4KJbMj6?_=V10
+Vni_;F@mL[17ZB;LR_NFA80
 R7
 31
 R140
@@ -809,12 +809,12 @@ R141
 R142
 R11
 R12
-!s100 ?HOU:]zOUlJFTNaa6bWJ;2
+!s100 ^H=HD;SFoSdY6nVRXJXQ51
 !i10b 1
 Eshl32
-Z143 w1677860622
+Z143 w1679932140
 R14
-R47
+R53
 R15
 R2
 R3
@@ -827,7 +827,7 @@ L7
 Vm^UMLo>`eXjNV93miX9Ea1
 R7
 31
-Z146 !s108 1679893129.455000
+Z146 !s108 1679939617.122000
 Z147 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/SHL32.vhd|
 Z148 !s107 C:/Users/salvi/repos/ELEC374Lab/SHL32.vhd|
 R11
@@ -836,7 +836,7 @@ R12
 !i10b 1
 Abehavioural
 R14
-R47
+R53
 R15
 R2
 R3
@@ -844,7 +844,7 @@ R16
 DEx4 work 5 shl32 0 22 m^UMLo>`eXjNV93miX9Ea1
 l16
 L15
-VOJDLeKD@WI_zJ@UkU_WN;3
+VVQ2Y^5Hd`f>22]SXEW>lJ3
 R7
 31
 R146
@@ -852,12 +852,12 @@ R147
 R148
 R11
 R12
-!s100 =?71[8zhG79Dh@jNfDm_m0
+!s100 AVlWnz080I6Q6TOleSg2b2
 !i10b 1
 Eshr32
-Z149 w1677860654
+Z149 w1679932189
 R14
-R47
+R53
 R15
 R2
 R3
@@ -870,7 +870,7 @@ L7
 V83dKaIzRURa2]bDVg:PT?2
 R7
 31
-Z152 !s108 1679893129.542000
+Z152 !s108 1679939617.279000
 Z153 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/SHR32.vhd|
 Z154 !s107 C:/Users/salvi/repos/ELEC374Lab/SHR32.vhd|
 R11
@@ -879,7 +879,7 @@ R12
 !i10b 1
 Abehavioural
 R14
-R47
+R53
 R15
 R2
 R3
@@ -887,7 +887,7 @@ R16
 DEx4 work 5 shr32 0 22 83dKaIzRURa2]bDVg:PT?2
 l16
 L15
-VG6LEmlbNo3?=?PCGE6ljY3
+V@fOkXOOi5ofPIEj_G;iCl3
 R7
 31
 R152
@@ -895,10 +895,10 @@ R153
 R154
 R11
 R12
-!s100 V8]lQO5AH>fSVVSFDYo3O0
+!s100 o4JM<66mZ17^kMhDFHh=C1
 !i10b 1
 Eshra32
-Z155 w1677373272
+Z155 w1679932265
 R3
 R2
 R14
@@ -910,7 +910,7 @@ L5
 V95c>VTa2Z8nEjdnJ8H0GA0
 R7
 31
-Z158 !s108 1679893129.633000
+Z158 !s108 1679939617.445000
 Z159 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/SHRA32.vhd|
 Z160 !s107 C:/Users/salvi/repos/ELEC374Lab/SHRA32.vhd|
 R11
@@ -924,7 +924,7 @@ R14
 DEx4 work 6 shra32 0 22 95c>VTa2Z8nEjdnJ8H0GA0
 l15
 L14
-VIASLJ_2en=W4OfXb7>>BO2
+V>UfHa2Ng]V7lVC9T9bmP;1
 R7
 31
 R158
@@ -932,7 +932,7 @@ R159
 R160
 R11
 R12
-!s100 dgFgOhncORJ4k^KSBNESP3
+!s100 O<?4f6Bm<Pez_a8n9FHgV1
 !i10b 1
 Esub32
 Z161 w1678155582
@@ -946,7 +946,7 @@ L4
 V1T:TQK8[Do4V?[oAEEL;n0
 R7
 31
-Z164 !s108 1679893130.083000
+Z164 !s108 1679939617.991000
 Z165 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/SUB32.vhd|
 Z166 !s107 C:/Users/salvi/repos/ELEC374Lab/SUB32.vhd|
 R11

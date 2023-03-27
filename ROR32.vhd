@@ -12,14 +12,10 @@ end entity ROR32;
 architecture behavioural of ROR32 is
 begin	
 	
-	process(A,B)
-	variable count :integer; 
-	variable Atemp, Btemp : std_logic_vector(31 downto 0);
-	variable savebit: std_logic; 
-	
-	begin
-			Atemp := A; 
-			Btemp := B; 
+
+	output<= std_logic_vector(rotate_right(unsigned(A), to_integer(signed(B))));
+			
+		
 			--output <= "00000000000000000000000000000000";
 			--for i in 0 to to_integer(signed(B)) loop -DOESNT WORK IT UPPER BOUND NEEDS TO BE CONSTANT DURING SYNTHESIS
 				--savebit := Atemp(0);
@@ -29,112 +25,8 @@ begin
 			--end loop; 
 		-- output <= std_logic_vector(rotate_right(unsigned(A), to_integer(signed(B))));
 		--HAVE TO DO ONE AT A TIME
-		case Btemp is
-        when "00000000000000000000000000000001" =>
-				-- savebit := Atemp(0);
-				-- output <= std_logic_vector(rotate_right(unsigned(Atemp), 1)));
-				-- output (31) <= savebit; 
-            output(30 downto 0) <= Atemp(31 downto 1);
-            output(31) <= Atemp(0);
-				
-        when "00000000000000000000000000000010" =>
-            output(29 downto 0) <= Atemp(31 downto 2);
-            output(31 downto 30) <= Atemp(1 downto 0);
-				
-        when "00000000000000000000000000000011" =>
-            output(28 downto 0) <= Atemp(31 downto 3);
-            output(31 downto 29) <= Atemp(2 downto 0);
-        when "00000000000000000000000000000100" =>
-            output(27 downto 0) <= Atemp(31 downto 4);
-            output(31 downto 28) <= Atemp(3 downto 0);
-				
-        when "00000000000000000000000000000101" =>
-            output(26 downto 0) <= Atemp(31 downto 5);
-            output(31 downto 27) <= Atemp(4 downto 0);
-        when "00000000000000000000000000000110" =>
-            output(25 downto 0) <= Atemp( 31 downto 6);
-            output(31 downto 26) <= Atemp(5 downto 0);
-        when "00000000000000000000000000000111" =>
-				output(24 downto 0) <= Atemp(31 downto 7);
-            output(31 downto 25) <= Atemp(6 downto 0);
-		  
-        when "00000000000000000000000000001000" =>
-            output(23 downto 0) <= Atemp(31 downto 8);
-            output(31 downto 24) <= Atemp(7 downto 0);
-        when "00000000000000000000000000001001" =>
-            output(22 downto 0) <= Atemp(31 downto 9);
-            output(31 downto 23) <= Atemp(8 downto 0);
-        when "00000000000000000000000000001010" =>
-            output(21 downto 0) <= Atemp(31 downto 10);
-            output(31 downto 22) <= Atemp(9 downto 0);
-        when "00000000000000000000000000001011" =>
-            output(20 downto 0) <= Atemp(31 downto 11);
-            output(31 downto 21) <= Atemp(10 downto 0);
-        when "00000000000000000000000000001100" =>
-             output(19 downto 0) <= Atemp(31 downto 12);
-            output(31 downto 20) <= Atemp(11 downto 0);
-        when "00000000000000000000000000001101" =>
-             output(18 downto 0) <= Atemp(31 downto 13);
-            output(31 downto 19) <= Atemp(12 downto 0);
-        when "00000000000000000000000000001110" =>
-             output(17 downto 0) <= Atemp(31 downto 14);
-            output(31 downto 18) <= Atemp(13 downto 0);
-        when "00000000000000000000000000001111" =>
-             output(16 downto 0) <= Atemp(31 downto 15);
-            output(31 downto 17) <= Atemp(14 downto 0);
-        when "00000000000000000000000000010000" =>
-             output(15 downto 0) <= Atemp(31 downto 16);
-            output(31 downto 16) <= Atemp(15 downto 0);
-        when "00000000000000000000000000010001" =>
-             output(14 downto 0) <= Atemp(31 downto 17);
-            output(31 downto 15) <= Atemp(16 downto 0);
-        when "00000000000000000000000000010010" =>
-             output(13 downto 0) <= Atemp(31 downto 18);
-            output(31 downto 14) <= Atemp(17 downto 0);
-        
-		  
-		  when "00000000000000000000000000010011" =>
-            output(12 downto 0) <= Atemp(31 downto 19);
-            output(31 downto 13) <= Atemp(18 downto 0);
-        when "00000000000000000000000000010100" =>
-            output(11 downto 0) <= Atemp(31 downto 20);
-            output(31 downto 12) <= Atemp(19 downto 0);
-        when "00000000000000000000000000010101" =>
-           output(10 downto 0) <= Atemp(31 downto 21);
-            output(31 downto 11) <= Atemp(20 downto 0);
-        when "00000000000000000000000000010110" =>
-           output(9 downto 0) <= Atemp(31 downto 22);
-            output(31 downto 10) <= Atemp(21 downto 0);
-        when "00000000000000000000000000010111" =>
-            output(8 downto 0) <= Atemp(31 downto 23);
-            output(31 downto 9) <= Atemp(22 downto 0);
-        when "00000000000000000000000000011000" =>
-            output(7 downto 0) <= Atemp(31 downto 24);
-            output(31 downto 8) <= Atemp(23 downto 0);
-        when "00000000000000000000000000011001" =>
-            output(6 downto 0) <= Atemp(31 downto 25);
-            output(31 downto 7) <= Atemp(24 downto 0);
-		  when "00000000000000000000000000011010" =>
-            output(5 downto 0) <= Atemp(31 downto 26);
-            output(31 downto 6) <= Atemp(25 downto 0);
-        when "00000000000000000000000000011011" =>
-            output(4 downto 0) <= Atemp(31 downto 27);
-            output(31 downto 5) <= Atemp(26 downto 0);
-        when "00000000000000000000000000011100" =>
-            output(3 downto 0) <= Atemp(31 downto 28);
-            output(31 downto 4) <= Atemp(27 downto 0);
-        when "00000000000000000000000000011101" =>
-            output(2 downto 0) <= Atemp(31 downto 29);
-            output(31 downto 3) <= Atemp(28 downto 0);
-        when "00000000000000000000000000011110" =>
-            output(1 downto 0) <= Atemp(31 downto 30);
-            output(31 downto 2) <= Atemp(29 downto 0);
-        when "00000000000000000000000000011111" =>
-            output(0) <= Atemp(31);
-            output(31 downto 1) <= Atemp(30 downto 0);
-        when others => 
-            output <= Atemp;
-    end case;
 		
-end process; 
+				
+       
+ 
 end architecture behavioural;

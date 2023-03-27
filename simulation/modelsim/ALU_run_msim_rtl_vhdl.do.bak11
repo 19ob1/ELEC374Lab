@@ -5,6 +5,7 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
+vcom -93 -work work {C:/Users/salvi/repos/ELEC374Lab/control_unit.vhd}
 vcom -93 -work work {C:/Users/salvi/repos/ELEC374Lab/reg32.vhd}
 vcom -93 -work work {C:/Users/salvi/repos/ELEC374Lab/encoder32to5.vhd}
 vcom -93 -work work {C:/Users/salvi/repos/ELEC374Lab/bus32to1.vhd}
@@ -29,13 +30,12 @@ vcom -93 -work work {C:/Users/salvi/repos/ELEC374Lab/RAM.vhd}
 vcom -93 -work work {C:/Users/salvi/repos/ELEC374Lab/reg0.vhd}
 vcom -93 -work work {C:/Users/salvi/repos/ELEC374Lab/CONFF.vhd}
 vcom -93 -work work {C:/Users/salvi/repos/ELEC374Lab/MARreg.vhd}
-vcom -93 -work work {C:/Users/salvi/repos/ELEC374Lab/preloadVal.vhd}
 
-vcom -93 -work work {C:/Users/salvi/repos/ELEC374Lab/ld_tb.vhd}
+vcom -93 -work work {C:/Users/salvi/repos/ELEC374Lab/phase3_tb.vhd}
 
-vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs="+acc"  ld_tb
+vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs="+acc"  phase3_tb
 
 add wave *
 view structure
 view signals
-run 500 ns
+run 1000 ns

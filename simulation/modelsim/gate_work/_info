@@ -1,0 +1,83 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\salvi\repos\ELEC374Lab\simulation\modelsim
+Econtrol_unit
+Z1 w1679901342
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\salvi\repos\ELEC374Lab\simulation\modelsim
+Z5 8C:/Users/salvi/repos/ELEC374Lab/control_unit.vhd
+Z6 FC:/Users/salvi/repos/ELEC374Lab/control_unit.vhd
+l0
+L4
+V?@[Y>;oWRoQ5[c?`dRbj`0
+!s100 ZDbDK1TGJBhIQDL7ehz@n2
+Z7 OV;C;10.1d;51
+31
+!i10b 1
+Z8 !s108 1679901833.371000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/salvi/repos/ELEC374Lab/control_unit.vhd|
+Z10 !s107 C:/Users/salvi/repos/ELEC374Lab/control_unit.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+Abehaviour
+R2
+R3
+DEx4 work 12 control_unit 0 22 ?@[Y>;oWRoQ5[c?`dRbj`0
+l26
+L18
+VM6G8nnFR:DIePZbfO9IN_3
+!s100 h<[iOVZ^M6XPzanC7dh8L2
+R7
+31
+!i10b 1
+R8
+R9
+R10
+R11
+R12
+Edatapath
+Z13 w1678085402
+Z14 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
+Z15 DPx10 cycloneiii 20 cycloneiii_atom_pack 0 22 n^46VOjinLK5_01fgQc6Z0
+Z16 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
+R2
+R3
+Z17 DPx10 cycloneiii 21 cycloneiii_components 0 22 VeH8af>S`B?U[[D6_Khe@0
+R4
+Z18 8ALU_6_1200mv_85c_slow.vho
+Z19 FALU_6_1200mv_85c_slow.vho
+l0
+L34
+V5eg>hz@Vdz7NG:C`^DLJl3
+R7
+31
+Z20 !s108 1679901833.280000
+Z21 !s90 -reportprogress|300|-93|-work|work|ALU_6_1200mv_85c_slow.vho|
+Z22 !s107 ALU_6_1200mv_85c_slow.vho|
+R11
+R12
+!s100 5baB5=S:[5[;beG@7F[RH1
+!i10b 1
+Astructure
+R14
+R15
+R16
+R2
+R3
+R17
+DEx4 work 8 datapath 0 22 5eg>hz@Vdz7NG:C`^DLJl3
+l387
+L209
+Vkbabl?m1a[AXSi6XJ0<8J2
+R7
+31
+R20
+R21
+R22
+R11
+R12
+!s100 hgALIWc1;MYiQ]Z7Onjh;2
+!i10b 1

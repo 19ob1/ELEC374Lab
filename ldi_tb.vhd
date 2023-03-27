@@ -316,8 +316,6 @@ WHEN Reg_load2a =>
 		MDRout_tb <= '1', '0' after 25 ns;   
 		IRin_tb <= '1', '0' after 25 ns;
 	WHEN T3=>
-		--MDRout_tb <= '0';   
-		--IRin_tb <= '0';
 	
 		Grb_tb <= '1', '0' after 25 ns;
 		BAout_tb <= '1', '0' after 25 ns;
@@ -333,10 +331,6 @@ WHEN Reg_load2a =>
 		ZLOout_tb <= '1', '0' after 20 ns;   
 		Gra_tb <= '1', '0' after 20 ns; 
 		Rin_tb <= '1', '0' after 20 ns; 
-		--MARin_tb <= '1', '0' after 25 ns;
-		--readS_tb <= '0', '1' after 19 ns;
-		
-	-- WHEN T6 =>
 		
 			
 	--WHEN T6b =>

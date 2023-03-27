@@ -4,35 +4,39 @@ use ieee.std_logic_arith.all;
 
 entity datapath is port(
 
-	Zin, HIin, LOin, PCin, Cin, INPORTin, OUTPORTin, IRin, MDRin, MARin, Yin : in std_logic;
-	PCout, Zlowout, Zhighout, LOout, HIout, INPORTout, MDRout, Cout : in std_logic;
 	
-	
-	writeRAM, readRAM: in std_logic; 
-	gra, grb, grc, Rin, Rout, BAout: in std_logic; 
-	CONFFoutput : out std_logic;
-	CONFFinput : in std_logic;
+	-- CONFFinput : in std_logic;
 	INPORTdata: in std_logic_vector(31 downto 0);
 	OUTPORTdata: out std_logic_vector(31 downto 0);
-	incPc, read_op, and_op, or_op, add_op, sub_op, mult_op, div_op, shr_op, shl_op, ror_op, rol_op, neg_op, not_op, shra_op : in std_logic;
 	
-	
-	-- signals needed to preload registers
-	out24: in std_logic; 	
-	preloadedValue: in std_logic_vector(31 downto 0);
-	R1msig, R1sig, R4msig, R4sig, R2msig, R2sig, R3msig, R3sig, R6msig, R6sig: in std_logic; 
 	
 	-- test signals
+	CONFFout : out std_logic;
 	R0val, R1val, R2val, R3val, R4val, R5val, R6val, R7val, R8val, R9val, R10val, R11val, R12val, R13val, R14val, R15val, MDRval, Yval, ZLOval, ZHIval, HIval, LOval, 
 	Busval: out std_logic_vector(31 downto 0);
 	RAMaddress: out std_logic_vector(8 downto 0);
 	RAMoutput, IRval, PCval, CSEout: out std_logic_vector(31 downto 0);
-	
-	clk, clear: in std_logic
+	runVal, clearVal, pcoutsig, readRAMinfo, MDRinfo, MDRoutinfo, Rininfo, Zloinfo: out std_logic; 
+	clk, reset, stop: in std_logic
 );
 end entity datapath; 
 
 architecture behaviour of datapath is
+
+component control_unit is 
+port(
+	clock, reset, stop, conFF : in std_logic;
+	run, clear : out std_logic;
+	IR : in std_logic_vector(31 downto 0);
+	PCout, MDRout, ZHIout, ZLOout, HIout, LOout, inportOUT : out std_logic;
+	Rin, Rout, Gra, Grb, Grc: out std_logic;
+	HIin, LOin, CONin, PCin, IRin, Yin, Zin, MARin, MDRin, OutPortin,INPORTin, Cout, BAout : out std_logic;
+	IncPC, and_op, or_op, add_op, sub_op, mul_op, div_op, shr_op, shl_op, ror_op,shra_op, rol_op, neg_op, not_op, read_op : out std_logic;
+	readRAM, writeRAM: out std_logic
+	);
+	
+end component;
+
 component ALU is 
 port(
 	Ain : in std_logic_vector(31 downto 0);
@@ -178,7 +182,14 @@ signal busMuxR0in, busMuxR1in, busMuxR2in, busMuxR3in, busMuxR4in, busMuxR5in, b
 busMuxR10in, busMuxR11in, busMuxR12in, busMuxR13in, busMuxR14in, busMuxR15in : std_logic_vector(31 downto 0);
 
 signal defaultSig : std_logic_vector(31 downto 0);
-
+signal CONFFinput, CONFFoutput: std_logic; 
+signal incPc, read_op, and_op, or_op, add_op, sub_op, mult_op, div_op, shr_op, shl_op, ror_op, rol_op, neg_op, not_op, shra_op : std_logic;
+signal writeRAM, readRAM: std_logic; 
+signal gra, grb, grc, Rin, Rout, BAout: std_logic; 
+signal Zin, HIin, LOin, PCin, Cin, INPORTin, OUTPORTin, IRin, MDRin, MARin, Yin : std_logic;
+signal PCout, Zlowout, Zhighout, LOout, HIout, INPORTout, MDRout, Cout : std_logic;
+--signal clear, stop, run, reset: std_logic;
+signal clear, run,  signalReset: std_logic;
 
 begin
 defaultSig <= (others => '0');
@@ -230,7 +241,7 @@ encoder: encoder32to5 port map(
 		inMdr => MDRout, 
 		inport=> INPORTout, 
 		inC => Cout,
-		in24 => out24, 
+		in24 => '0', 
 		in25 => '0', 
 		in26 => '0',
 		in27 => '0',
@@ -267,7 +278,7 @@ busUnit: bus32to1 port map(
 										mux_in_MDR =>busMuxMDRin,
 										mux_in_InPort =>busMuxINPORTin,
 										mux_in_C_sign_extended=>busMuxCin,
-										mux24 => preloadedValue, 
+										mux24 => defaultSig, 
 										mux25 => defaultSig,
 										mux26 =>defaultSig,
 										mux27 =>defaultSig,
@@ -316,8 +327,7 @@ port map(
 	R12in => R12in,
 	R13in => R13in,
 	R14in => R14in,
-	R15in => R15in,
-	
+	R15in => R15in, 
 	R0out => R0out,
 	R1out => R1out,
 	R2out => R2out,
@@ -356,16 +366,26 @@ CONFFunit : CONFF
 		CONFFinput => CONFFinput,
 		CONFFoutput => CONFFoutput
 	);
-													
+	
+CONTROLU: control_unit port map(clock => clk, clear => clear, reset => reset, 
+run => run, stop => stop, CONFF => CONFFoutput, IR => IRwire, readRAM => readRAM, 
+writeRAM => writeRAM, Gra => gra, Grb => grb, Grc => grc, Rin => rin, Rout => rout, 
+HIin => HIin, LOin => LOin, CONin => CONFFinput, PCin => PCin, IRin => IRin, Yin => Yin, 
+Zin => Zin, MarIn => MARin, MDRin => MDRin, OutPortin => OUTPORTin, INPORTin => INPORTin, 
+Cout => Cout, Baout => baout, PCout => Pcout, MDRout => MDRout, ZHIout => Zhighout, ZLOout => Zlowout, 
+HIout => Hiout, LOout => LOout, inportOUT => inportOUT, add_op => add_op, sub_op => sub_op, and_op => and_op, 
+or_op => or_op, shr_op => shr_op, shl_op => shl_op, ror_op => ror_op, rol_op=> rol_op, mul_op => mult_op, 
+div_op => div_op, neg_op => neg_op, not_op => not_op, incPC => incPC, read_op => read_op, shra_op=> shra_op);
+
 	
 --registers
 register0: reg0 port map(inputd=> BusMuxOut,outputq=> busMuxR0in, Baout => baout, clear => clear, clk => clk, enable => R0in);
-reg1 : reg32 port map(inputd=> BusMuxOut, outputq=> busMuxR1in, clear => clear, clk => clk, enable => newR1sig);
-reg2 : reg32 port map(inputd=> BusMuxOut, outputq=> busMuxR2in, clear => clear, clk => clk, enable => newR2sig);
-reg3 : reg32 port map(inputd=> BusMuxOut,outputq=> busMuxR3in,clear => clear, clk => clk, enable => newR3sig);
-reg4 : reg32 port map(inputd=> BusMuxOut,outputq=> busMuxR4in,clear => clear, clk => clk, enable => newR4sig);
+reg1 : reg32 port map(inputd=> BusMuxOut, outputq=> busMuxR1in, clear => clear, clk => clk, enable => R1in);
+reg2 : reg32 port map(inputd=> BusMuxOut, outputq=> busMuxR2in, clear => clear, clk => clk, enable => R2in);
+reg3 : reg32 port map(inputd=> BusMuxOut,outputq=> busMuxR3in,clear => clear, clk => clk, enable => R3in);
+reg4 : reg32 port map(inputd=> BusMuxOut,outputq=> busMuxR4in,clear => clear, clk => clk, enable => R4in);
 reg5 : reg32 port map(inputd=> BusMuxOut,outputq=> busMuxR5in,clear => clear, clk => clk, enable => R5in);
-reg6 : reg32 port map(inputd=> BusMuxOut,outputq=> busMuxR6in,clear => clear, clk => clk, enable => newR6sig);
+reg6 : reg32 port map(inputd=> BusMuxOut,outputq=> busMuxR6in,clear => clear, clk => clk, enable => R6in);
 reg7 : reg32 port map(inputd=> BusMuxOut,outputq=> busMuxR7in,clear => clear, clk => clk, enable => R7in);
 reg8 : reg32 port map(inputd=> BusMuxOut,outputq=> busMuxR8in,clear => clear, clk => clk, enable => R8in);
 reg9 : reg32 port map(inputd=> BusMuxOut,outputq=> busMuxR9in,clear => clear, clk => clk, enable => R9in);
@@ -374,20 +394,15 @@ reg11 : reg32 port map(inputd=> BusMuxOut,outputq=> busMuxR11in, clear => clear,
 reg12 : reg32 port map(inputd=> BusMuxOut,outputq=> busMuxR12in, clear => clear, clk => clk, enable => R12in);
 reg13 : reg32 port map(inputd=> BusMuxOut,outputq=> busMuxR13in, clear => clear, clk => clk, enable => R13in);
 reg14 : reg32 port map(inputd=> BusMuxOut,outputq=> busMuxR14in, clear => clear, clk => clk, enable => R14in);
-reg15 : reg32 port map(inputd=> BusMuxOut,outputq=> busMuxR15in,clear => clear, clk => clk, enable => R15in);
-regHI : reg32 port map(inputd=> BusMuxOut,outputq=> busMuxHIin,clear => clear, clk => clk, enable => HIin);
-regLO : reg32 port map(inputd=> BusMuxOut,outputq=> busMuxLOin,clear => clear, clk => clk, enable => LOin);
+reg15 : reg32 port map(inputd=> BusMuxOut,outputq=> busMuxR15in, clear => clear, clk => clk, enable => R15in);
+regHI : reg32 port map(inputd=> BusMuxOut,outputq=> busMuxHIin, clear => clear, clk => clk, enable => HIin);
+regLO : reg32 port map(inputd=> BusMuxOut,outputq=> busMuxLOin, clear => clear, clk => clk, enable => LOin);
 regIR : reg32 port map(inputd=> BusMuxOut,outputq=> IRwire, clear => clear,clk => clk, enable => IRin);
 regY : reg32 port map(inputd=> BusMuxOut,outputq=> YdataOut,clear => clear, clk => clk, enable => Yin);
 regPC : reg32 port map(inputd=> BusMuxOut,outputq=> busMuxPCin,clear => clear, clk => clk, enable => PCin);
 regZhigh : reg32 port map(inputd=> ALU_output(63 downto 32),outputq=> busMuxZhighin, clear => clear, clk => clk, enable => Zin);
 regZlow : reg32 port map(inputd=> ALU_output(31 downto 0),outputq=> busMuxZlowin,clear => clear, clk => clk, enable => Zin);
 
-R1preload : preloadVal port map(en => R1sig, manualEntry => R1msig , selOutput => R1in, enable => newR1sig);
-R2preload : preloadVal port map(en => R2sig, manualEntry => R2msig , selOutput => R2in, enable => newR2sig);
-R3preload : preloadVal port map(en => R3sig, manualEntry => R3msig , selOutput => R3in, enable => newR3sig);
-R4preload : preloadVal port map(en => R4sig, manualEntry => R4msig , selOutput => R4in, enable => newR4sig);
-R6preload : preloadVal port map(en => R6sig, manualEntry => R6msig , selOutput => R6in, enable => newR6sig);
 
 MARregister : MARreg port map(inputd => BusMuxOut, outputq => MARout, clear => clear, clk => clk, enable => MARin);
 
@@ -398,10 +413,11 @@ regOUTPORT : reg32 port map(inputd => BusMuxOut, outputq => OUTPORTout, clear =>
 process (clk, clear,  
 R0In, R1In, R2In, R3In, R4In, R5In, R6In, R7In, R8In, R9In, R10In, 
 R11In, R12In, R13In, R14In, R15In, HIIn, LOIn, Zin, PCin, IRin, MDRin, 
-INPORTin, Cin, Yin, BusMuxOut) is
+INPORTin, Cin, Yin, BusMuxOut, run, stop, reset) is
 
-begin
-
+begin  
+runVAl <= run;
+clearVal <= clear; 
 R0val <= busMuxR0in;
 R1val <= busMuxR1in;
 R2val <= busMuxR2in;
@@ -430,6 +446,13 @@ Busval <= BusMuxOut;
 PCval <= busMuxPCin;
 CSEout <= busMuxCin;
 OUTPORTdata <=OUTPORTout;
+CONFFout <= CONFFoutput;
+pcoutsig<= PCout; 
+readRAMinfo <= readRAM;
+MDRinfo <= MDRin;
+MDRoutinfo <= MDRout; 
+Rininfo <= Rin; 
+Zloinfo <= Zlowout; 
 end process;
 
 process(Mdatain)
